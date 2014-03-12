@@ -1,0 +1,183 @@
+/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+header#top:before, header#top:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+header#top:after {
+  clear: both;
+}
+
+/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#wrapptop:before, #wrapptop:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#wrapptop:after {
+  clear: both;
+}
+
+/* line 16, ../sass/style.scss */
+#logo {
+  float: left;
+  width: 40%;
+  margin-left: 0%;
+  margin-right: -40%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 20, ../sass/style.scss */
+#top-menu {
+  float: left;
+  width: 40%;
+  margin-left: 60%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 23, ../sass/style.scss */
+#slider {
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 28, ../sass/style.scss */
+#page {
+  clear: left;
+}
+/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:before, #page:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:after {
+  clear: both;
+}
+
+/* line 33, ../sass/style.scss */
+#sidebar {
+  float: left;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: -20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 36, ../sass/style.scss */
+#content {
+  float: left;
+  width: 80%;
+  margin-left: 20%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 39, ../sass/style.scss */
+#footer {
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 52, ../sass/style.scss */
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 57, ../sass/style.scss */
+body {
+  background: #fdfdfd;
+}
+
+/* line 61, ../sass/style.scss */
+#top {
+  background: #d2d2d2;
+}
+
+/* line 65, ../sass/style.scss */
+#wrapptop {
+  background: #1b1b1b;
+  height: 50px;
+}
+
+/* line 71, ../sass/style.scss */
+#logo h1 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* line 78, ../sass/style.scss */
+#top-menu ul {
+  list-style: none;
+}
+/* line 80, ../sass/style.scss */
+#top-menu ul li {
+  display: inline-block;
+}
+/* line 82, ../sass/style.scss */
+#top-menu ul li a {
+  text-decoration: none;
+  color: #d2d2d2;
+}
+/* line 18, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#top-menu ul li a:visited {
+  color: #d2d2d2;
+}
+/* line 21, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#top-menu ul li a:focus {
+  color: #9f9f9f;
+}
+/* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#top-menu ul li a:hover {
+  color: #9f9f9f;
+}
+/* line 27, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#top-menu ul li a:active {
+  color: #9f9f9f;
+}

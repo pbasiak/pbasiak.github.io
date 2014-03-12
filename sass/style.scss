@@ -1,0 +1,89 @@
+// Struktura
+
+@import "zen";
+@import "compass";
+
+$zen-column-count:  5;
+$zen-gutter-width:  20px;
+
+header#top{
+	@include zen-grid-container;
+}
+#wrapptop {
+	@include zen-grid-container;
+}
+
+#logo {
+	@include zen-grid-item(2,1);
+}
+
+#top-menu {
+	@include zen-grid-item(2,4);
+}
+#slider {
+	@include zen-clear();
+	@include zen-grid-item(5,1);
+}
+
+#page {
+	@include zen-clear();
+	@include zen-grid-container;
+}
+
+#sidebar {
+	@include zen-grid-item(1,1);
+}
+#content {
+	@include zen-grid-item(4,2);
+}
+#footer {
+	@include zen-clear();
+	@include zen-grid-item(5,1);
+}
+
+
+//Style
+
+$dark: #1b1b1b;
+$red: #f04d42;
+$light:#d2d2d2;
+$light20: darken($light, 20);
+
+html, body {
+	width:100%;
+	min-height:100%;
+}
+
+body {
+	background:#fdfdfd;
+}
+
+#top {
+	background:$light;
+}
+
+#wrapptop {
+	background:$dark;
+	height:50px;
+}
+
+#logo {
+	h1 {
+		font-size:24px;
+		font-weight:300;
+	}
+}
+
+#top-menu {
+	ul {
+		list-style:none;
+		li {
+			display:inline-block;
+			a {
+				text-decoration:none; 
+				@include link-colors($light,$light20,$light20,$light,$light20);
+			}
+		}
+	}
+}
+
