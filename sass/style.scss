@@ -60,6 +60,11 @@ $red: #f04d42;
 $light:#d2d2d2;
 $light20: darken($light, 20);
 
+a {
+	@include link-colors($red,darken($red,20),darken($red,20),$red,darken($red,20));
+	text-decoration:none;
+}
+
 html, body {
 	width:100%;
 	min-height:100%;
@@ -98,6 +103,19 @@ body {
 				text-decoration:none; 
 				@include link-colors($light,$light20,$light20,$light,$light20);
 			}
+		}
+	}
+}
+
+#menu {
+	ul {
+		list-style:none;
+		background:$dark;
+		@include border-radius(4px);
+		padding: 20px 0;
+
+		li {
+
 		}
 	}
 }
