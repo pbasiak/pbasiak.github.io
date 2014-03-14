@@ -230,3 +230,15 @@ body {
   border-radius: 4px;
   padding: 20px 0;
 }
+/* line 117, ../sass/style.scss */
+#menu ul li {
+  text-align: center;
+}
+/* line 120, ../sass/style.scss */
+#menu ul li a {
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
+}
+/* line 124, ../sass/style.scss */
+#menu ul li:hover {
+  background: #eee;
+}

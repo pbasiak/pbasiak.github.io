@@ -115,7 +115,15 @@ body {
 		padding: 20px 0;
 
 		li {
+			text-align:center;
+			//background:#eee;
+			a{
+				@include text-shadow(rgba(0,0,0,0.5) 1px 1px);
+			}
 
+			&:hover {
+				background:#eee;
+			}
 		}
 	}
 }
