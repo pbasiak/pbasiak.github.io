@@ -6,11 +6,18 @@
 $zen-column-count:  5;
 $zen-gutter-width:  20px;
 
+$max-width:1200px;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext);
+
 header#top{
 	@include zen-grid-container;
 }
 #wrapptop {
 	@include zen-grid-container;
+}
+.row {
+	max-width:$max-width;
+	margin:0 auto;
 }
 
 #logo {
@@ -23,11 +30,15 @@ header#top{
 #slider {
 	@include zen-clear();
 	@include zen-grid-item(5,1);
+	max-width:$max-width;
+	margin:0 auto;
 }
 
 #page {
 	@include zen-clear();
 	@include zen-grid-container;
+	max-width:$max-width;
+	margin:0 auto;
 }
 
 #sidebar {
@@ -52,10 +63,13 @@ $light20: darken($light, 20);
 html, body {
 	width:100%;
 	min-height:100%;
+	margin:0;
+	padding:0;
 }
 
 body {
 	background:#fdfdfd;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #top {
@@ -71,6 +85,7 @@ body {
 	h1 {
 		font-size:24px;
 		font-weight:300;
+		color:$light;
 	}
 }
 

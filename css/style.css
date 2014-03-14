@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext);
 /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 header#top:before, header#top:after {
   content: "";
@@ -18,7 +19,13 @@ header#top:after {
   clear: both;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 23, ../sass/style.scss */
 #logo {
   float: left;
   width: 40%;
@@ -33,7 +40,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 #top-menu {
   float: left;
   width: 40%;
@@ -48,7 +55,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 #slider {
   clear: left;
   float: left;
@@ -62,11 +69,15 @@ header#top:after {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 #page {
   clear: left;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #page:before, #page:after {
@@ -78,7 +89,7 @@ header#top:after {
   clear: both;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 #sidebar {
   float: left;
   width: 20%;
@@ -93,7 +104,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 #content {
   float: left;
   width: 80%;
@@ -108,7 +119,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 #footer {
   clear: left;
   float: left;
@@ -124,43 +135,47 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 html, body {
   width: 100%;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 body {
   background: #fdfdfd;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #top {
   background: #d2d2d2;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #wrapptop {
   background: #1b1b1b;
   height: 50px;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #logo h1 {
   font-size: 24px;
   font-weight: 300;
+  color: #d2d2d2;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 #top-menu ul {
   list-style: none;
 }
-/* line 80, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 #top-menu ul li {
   display: inline-block;
 }
-/* line 82, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 #top-menu ul li a {
   text-decoration: none;
   color: #d2d2d2;
