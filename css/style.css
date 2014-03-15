@@ -270,3 +270,8 @@ body {
 #menu ul li:hover {
   background: #eee;
 }
+
+/* line 138, ../sass/style.scss */
+#slider {
+  font-weight: 300;
+}
