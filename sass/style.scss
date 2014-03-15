@@ -30,9 +30,16 @@ header#top{
 #slider {
 	@include zen-clear();
 	@include zen-grid-item(5,1);
-	max-width:$max-width;
-	margin:0 auto;
 }
+
+#description {
+	@include zen-grid-item(3,1);
+}
+#latest {
+	@include zen-grid-item(2,4);
+}
+
+
 
 #page {
 	@include zen-clear();

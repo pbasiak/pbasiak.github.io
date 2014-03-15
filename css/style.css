@@ -69,11 +69,39 @@ header#top:after {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
+#description {
+  float: left;
+  width: 60%;
+  margin-left: 0%;
+  margin-right: -60%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 38, ../sass/style.scss */
+#latest {
+  float: left;
+  width: 40%;
+  margin-left: 60%;
+  margin-right: -100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 44, ../sass/style.scss */
 #page {
   clear: left;
   max-width: 1200px;
@@ -89,7 +117,7 @@ header#top:after {
   clear: both;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 #sidebar {
   float: left;
   width: 20%;
@@ -104,7 +132,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 #content {
   float: left;
   width: 80%;
@@ -119,7 +147,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 #footer {
   clear: left;
   float: left;
@@ -135,7 +163,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 a {
   color: #f04d42;
   text-decoration: none;
@@ -157,7 +185,7 @@ a:active {
   color: #bd1a0f;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 html, body {
   width: 100%;
   min-height: 100%;
@@ -165,39 +193,39 @@ html, body {
   padding: 0;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 body {
   background: #fdfdfd;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #top {
   background: #d2d2d2;
 }
 
-/* line 84, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #wrapptop {
   background: #1b1b1b;
   height: 50px;
 }
 
-/* line 90, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 #logo h1 {
   font-size: 24px;
   font-weight: 300;
   color: #d2d2d2;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 #top-menu ul {
   list-style: none;
 }
-/* line 100, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 #top-menu ul li {
   display: inline-block;
 }
-/* line 102, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 #top-menu ul li a {
   text-decoration: none;
   color: #d2d2d2;
@@ -219,7 +247,7 @@ body {
   color: #9f9f9f;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 #menu ul {
   list-style: none;
   background: #1b1b1b;
@@ -230,15 +258,15 @@ body {
   border-radius: 4px;
   padding: 20px 0;
 }
-/* line 117, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 #menu ul li {
   text-align: center;
 }
-/* line 120, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #menu ul li a {
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
 }
-/* line 124, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 #menu ul li:hover {
   background: #eee;
 }
