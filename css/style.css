@@ -163,7 +163,7 @@ header#top:after {
   word-wrap: break-word;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 a {
   color: #f04d42;
   text-decoration: none;
@@ -185,7 +185,7 @@ a:active {
   color: #bd1a0f;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 html, body {
   width: 100%;
   min-height: 100%;
@@ -193,40 +193,41 @@ html, body {
   padding: 0;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 body {
-  background: url(../images/bg.jpg) no-repeat top center;
+  background: url(../images/bg1.jpg) no-repeat top center;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
+  color: #d2d2d2;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 #top {
   background: #d2d2d2;
 }
 
-/* line 92, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 #wrapptop {
-  background: #1b1b1b;
+  background: rgba(0, 0, 0, 0.4);
   height: 50px;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 #logo h1 {
   font-size: 24px;
   font-weight: 300;
   color: #d2d2d2;
 }
 
-/* line 106, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 #top-menu ul {
   list-style: none;
 }
-/* line 108, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 #top-menu ul li {
   display: inline-block;
 }
-/* line 110, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 #top-menu ul li a {
   text-decoration: none;
   color: #d2d2d2;
@@ -248,10 +249,10 @@ body {
   color: #9f9f9f;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 #menu ul {
   list-style: none;
-  background: #1b1b1b;
+  background: rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -259,20 +260,20 @@ body {
   border-radius: 4px;
   padding: 20px 0;
 }
-/* line 125, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #menu ul li {
   text-align: center;
 }
-/* line 128, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #menu ul li a {
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
 }
-/* line 132, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #menu ul li:hover {
   background: #eee;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 #slider {
   font-weight: 300;
 }
