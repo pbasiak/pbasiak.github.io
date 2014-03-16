@@ -65,7 +65,7 @@ header#top{
 $dark: #1b1b1b;
 $red: rgba(151, 33, 33, 1);
 $light:#d2d2d2;
-$light20: darken($light, 20);
+$light20: lighten($light, 20);
 $darktrans: rgba(0,0,0,0.4);
 
 a {

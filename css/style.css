@@ -255,15 +255,15 @@ h1 {
 }
 /* line 21, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 #top-menu ul li a:focus {
-  color: #9f9f9f;
+  color: white;
 }
 /* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 #top-menu ul li a:hover {
-  color: #9f9f9f;
+  color: white;
 }
 /* line 27, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 #top-menu ul li a:active {
-  color: #9f9f9f;
+  color: white;
 }
 
 /* line 140, ../sass/style.scss */
