@@ -101,8 +101,17 @@ h1 {
 }
 
 #wrapptop {
-	background:$darktrans;
+	background:rgba(151, 33, 33, 1);
 	min-height:50px;
+}
+
+#description {
+
+}
+#latest {
+	h3 {
+		border:0;
+	}
 }
 
 #logo {
@@ -110,6 +119,7 @@ h1 {
 		font-size:32px;
 		font-weight:300;
 		color:$light;
+		border:0;
 	}
 }
 
