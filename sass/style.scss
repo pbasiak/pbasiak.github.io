@@ -69,7 +69,7 @@ $light20: lighten($light, 20);
 $darktrans: rgba(0,0,0,0.4);
 
 a {
-	@include link-colors($red,darken($red,20),darken($red,20),$red,darken($red,20));
+	@include link-colors($red,lighten($red,20),lighten($red,20),$red,lighten($red,20));
 	text-decoration:none;
 }
 

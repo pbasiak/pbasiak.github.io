@@ -174,15 +174,15 @@ a:visited {
 }
 /* line 21, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:focus {
-  color: #430f0f;
+  color: #d74747;
 }
 /* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
-  color: #430f0f;
+  color: #d74747;
 }
 /* line 27, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:active {
-  color: #430f0f;
+  color: #d74747;
 }
 
 /* line 76, ../sass/style.scss */
