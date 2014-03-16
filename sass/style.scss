@@ -87,18 +87,27 @@ body {
 	color:$light;
 }
 
+h1, h2, h3 {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-weight:300;
+
+}
+h1 {
+	font-size:32px;
+}
+
 #top {
 	background:$darktrans;
 }
 
 #wrapptop {
 	background:$darktrans;
-	height:50px;
+	min-height:50px;
 }
 
 #logo {
 	h1 {
-		font-size:24px;
+		font-size:32px;
 		font-weight:300;
 		color:$light;
 	}
@@ -140,4 +149,16 @@ body {
 
 #slider {
 	font-weight:300; 
+}
+#footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	p {
+		font-size:11px;
+		text-align:center;
+		border-top: 1px solid rgba(255,255,255,0.2);
+		background: rgba(0,0,0,0.4);
+		padding:5px;
+	}
 }
