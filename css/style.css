@@ -165,24 +165,24 @@ header#top:after {
 
 /* line 71, ../sass/style.scss */
 a {
-  color: #f04d42;
+  color: #972121;
   text-decoration: none;
 }
 /* line 18, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:visited {
-  color: #f04d42;
+  color: #972121;
 }
 /* line 21, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:focus {
-  color: #bd1a0f;
+  color: #430f0f;
 }
 /* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
-  color: #bd1a0f;
+  color: #430f0f;
 }
 /* line 27, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:active {
-  color: #bd1a0f;
+  color: #430f0f;
 }
 
 /* line 76, ../sass/style.scss */
@@ -195,7 +195,7 @@ html, body {
 
 /* line 83, ../sass/style.scss */
 body {
-  background: url(../images/bg1.jpg) no-repeat top center;
+  background: #1b1b1b url(../images/bg1.jpg) no-repeat top center;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   color: #d2d2d2;
@@ -280,28 +280,29 @@ h1 {
 /* line 146, ../sass/style.scss */
 #menu ul li {
   text-align: center;
+  padding: 5px 0;
 }
-/* line 149, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 #menu ul li a {
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
 }
-/* line 153, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #menu ul li:hover {
-  background: #eee;
+  background: rgba(155, 55, 55, 0.2);
 }
 
-/* line 160, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 #slider {
   font-weight: 300;
 }
 
-/* line 163, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #footer {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 167, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 #footer p {
   font-size: 11px;
   text-align: center;

@@ -63,7 +63,7 @@ header#top{
 //Style
 
 $dark: #1b1b1b;
-$red: #f04d42;
+$red: rgba(151, 33, 33, 1);
 $light:#d2d2d2;
 $light20: darken($light, 20);
 $darktrans: rgba(0,0,0,0.4);
@@ -81,7 +81,7 @@ html, body {
 }
 
 body {
-	background:url(../images/bg1.jpg) no-repeat top center;
+	background:#1b1b1b url(../images/bg1.jpg) no-repeat top center;
 	background-size:cover;
 	font-family: 'Open Sans', sans-serif;
 	color:$light;
@@ -145,13 +145,14 @@ h1 {
 
 		li {
 			text-align:center;
+			padding:5px 0;
 			//background:#eee;
 			a{
 				@include text-shadow(rgba(0,0,0,0.5) 1px 1px);
 			}
 
 			&:hover {
-				background:#eee;
+				background:rgba(155,55,55,0.2);
 			}
 		}
 	}
