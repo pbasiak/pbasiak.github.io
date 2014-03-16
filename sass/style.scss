@@ -149,10 +149,11 @@ h1 {
 			//background:#eee;
 			a{
 				@include text-shadow(rgba(0,0,0,0.5) 1px 1px);
+				@include link-colors($light,darken($light,15),darken($light,15),$light,darken($light,15));
 			}
 
 			&:hover {
-				background:rgba(155,55,55,0.2);
+				background:rgba(151, 33, 33, 1);
 			}
 		}
 	}
@@ -160,6 +161,13 @@ h1 {
 
 #slider {
 	font-weight:300; 
+}
+
+#content {
+
+	p {
+		font-size:12px;
+	}
 }
 #footer {
 	position:absolute;

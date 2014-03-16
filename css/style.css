@@ -285,24 +285,46 @@ h1 {
 /* line 150, ../sass/style.scss */
 #menu ul li a {
   text-shadow: rgba(0, 0, 0, 0.5) 1px 1px;
+  color: #d2d2d2;
 }
-/* line 154, ../sass/style.scss */
+/* line 18, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#menu ul li a:visited {
+  color: #d2d2d2;
+}
+/* line 21, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#menu ul li a:focus {
+  color: #acacac;
+}
+/* line 24, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#menu ul li a:hover {
+  color: #acacac;
+}
+/* line 27, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#menu ul li a:active {
+  color: #acacac;
+}
+/* line 155, ../sass/style.scss */
 #menu ul li:hover {
-  background: rgba(155, 55, 55, 0.2);
+  background: #972121;
 }
 
-/* line 161, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #slider {
   font-weight: 300;
 }
 
-/* line 164, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
+#content p {
+  font-size: 12px;
+}
+
+/* line 172, ../sass/style.scss */
 #footer {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 168, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 #footer p {
   font-size: 11px;
   text-align: center;
