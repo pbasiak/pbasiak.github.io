@@ -3,6 +3,8 @@
 @import "zen";
 @import "compass";
 
+@import "slider";
+
 $zen-column-count:  5;
 $zen-gutter-width:  20px;
 
@@ -136,8 +138,13 @@ h1 {
 	}
 
 	#github {
-		@include border-radius(20px);
+		@include border-radius(50px);
 		background:rgba(0,0,0,0.5);
+		width:60px;
+		height:60px;
+		text-align:center;
+		padding:12px 5px;
+		margin-top:10px;
 	}
 }
 
@@ -166,6 +173,8 @@ h1 {
 
 #slider {
 	font-weight:300; 
+	min-height:200px;
+	padding-top:20px;
 }
 
 #content {
