@@ -1,0 +1,4 @@
+markdown: kramdown
+exlude: ["sass","sass-extensions"]
+timezone: Europe/Warsaw
+encoding: utf-8
