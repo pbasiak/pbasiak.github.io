@@ -1,0 +1,198 @@
+// Struktura
+
+@import "zen";
+@import "compass";
+
+@import "slider";
+@import "wplogo";
+
+$zen-column-count:  5;
+$zen-gutter-width:  20px;
+
+$max-width:1200px;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext);
+
+header#top{
+	@include zen-grid-container;
+}
+#wrapptop {
+	@include zen-grid-container;
+}
+.row {
+	max-width:$max-width;
+	margin:0 auto;
+}
+
+#logo {
+	@include zen-grid-item(2,1);
+}
+
+#top-menu {
+	@include zen-grid-item(2,4);
+}
+#slider {
+	@include zen-clear();
+	@include zen-grid-item(5,1);
+}
+
+#description {
+	@include zen-grid-item(3,1);
+}
+#latest {
+	@include zen-grid-item(2,4);
+}
+
+
+
+#page {
+	@include zen-clear();
+	@include zen-grid-container;
+	max-width:$max-width;
+	margin:0 auto;
+}
+
+#sidebar {
+	@include zen-grid-item(1,1);
+}
+#content {
+	@include zen-grid-item(4,2);
+}
+#footer {
+	@include zen-clear();
+	@include zen-grid-item(5,1);
+}
+
+
+//Style
+
+$dark: #1b1b1b;
+$red: rgba(151, 33, 33, 1);
+$light:#d2d2d2;
+$light20: lighten($light, 20);
+$darktrans: rgba(0,0,0,0.4);
+
+a {
+	@include link-colors($red,lighten($red,20),lighten($red,20),$red,lighten($red,20));
+	text-decoration:none;
+}
+
+html, body {
+	width:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#1b1b1b url(../images/bg1.jpg) no-repeat top center;
+	background-size:cover;
+	font-family: 'Open Sans', sans-serif;
+	color:$light;
+}
+
+h1, h2, h3 {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-weight:300;
+
+}
+h1 {
+	font-size:32px;
+}
+
+#top {
+	background:$darktrans;
+}
+
+#wrapptop {
+	background:rgba(151, 33, 33, 1);
+	min-height:50px;
+}
+
+#description {
+
+}
+#latest {
+	h3 {
+		border:0;
+	}
+}
+
+#logo {
+	h1 {
+		font-size:32px;
+		font-weight:300;
+		color:$light;
+		border:0;
+	}
+}
+
+#top-menu {
+	ul {
+		list-style:none;
+		li {
+			display:inline-block;
+			a {
+				text-decoration:none; 
+				@include link-colors($light,$light20,$light20,$light,$light20);
+			}
+		}
+	}
+
+	#github {
+		@include border-radius(50px);
+		background:rgba(0,0,0,0.5);
+		width:60px;
+		height:60px;
+		text-align:center;
+		padding:12px 5px;
+		margin-top:10px;
+	}
+}
+
+#menu {
+	ul {
+		list-style:none;
+		background:$darktrans;
+		@include border-radius(4px);
+		padding: 20px 0;
+
+		li {
+			text-align:center;
+			padding:5px 0;
+			//background:#eee;
+			a{
+				@include text-shadow(rgba(0,0,0,0.5) 1px 1px);
+				@include link-colors($light,darken($light,15),darken($light,15),$light,darken($light,15));
+			}
+
+			&:hover {
+				background:rgba(151, 33, 33, 1);
+			}
+		}
+	}
+}
+
+#slider {
+	font-weight:300; 
+	min-height:200px;
+	padding-top:20px;
+}
+
+#content {
+
+	p {
+		font-size:12px;
+	}
+}
+#footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	p {
+		font-size:11px;
+		text-align:center;
+		border-top: 1px solid rgba(255,255,255,0.2);
+		background: rgba(0,0,0,0.4);
+		padding:5px;
+	}
+}
