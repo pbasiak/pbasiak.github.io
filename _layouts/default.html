@@ -1,13 +1,6 @@
 <!DOCTYPE HTML>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-  {% if page.title %} {{ page.title }} | {% endif %} pbasiak
- <meta name="description" content="pbasiak github.io home page">
- <meta name="keywords" content="pbasiak">
-  <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico"> -->
-  <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
-  <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	{% include head.html %}
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
@@ -52,25 +45,25 @@
 <body>
 
 	<div id="page">
+
 		<div id="sidebar">
+
 			{% include menu.html %}
+
 		</div>
+
 		<div id="content">
+
 			{{ content }}
-			{% for post in site.posts %}
-	 
-			  <li>
-			    <a href="{{ post.url }}">
-			      <img src="{{ post.image }}" />
-			      <h3>{{ post.title }}</h3>
-			    </a>
-			  </li>
-	 
-	 		{% endfor %}
+		
 		</div>
+
 		<div id="footer">
+
 			{% include footer.html %}
+
 		</div>
+
 	</div>
 
  </body>
