@@ -505,8 +505,18 @@ h1 {
 #content p {
   font-size: 12px;
 }
+/* line 186, ../sass/style.scss */
+#content .entries {
+  list-style: none;
+  padding: 0;
+}
+/* line 189, ../sass/style.scss */
+#content .entries img {
+  max-width: 100%;
+  width: 100%;
+}
 
-/* line 191, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 #footer p {
   font-size: 11px;
   text-align: center;

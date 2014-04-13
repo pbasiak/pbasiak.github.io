@@ -183,6 +183,14 @@ h1 {
 	p {
 		font-size:12px;
 	}
+	.entries {
+		list-style:none;
+		padding:0;
+		img {
+			max-width:100%;
+			width:100%;
+		}
+	}
 }
 #footer {
 	//position:absolute;
