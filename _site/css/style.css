@@ -506,12 +506,6 @@ h1 {
   font-size: 12px;
 }
 
-/* line 187, ../sass/style.scss */
-#footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 /* line 191, ../sass/style.scss */
 #footer p {
   font-size: 11px;
