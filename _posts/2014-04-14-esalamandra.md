@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/esalamandra.jpg
 title: ESalamandra
 tags:
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - Drupal
 ---

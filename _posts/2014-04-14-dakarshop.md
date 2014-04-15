@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/dakarshop.jpg
 title: DakarShop
 tags:
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - Prestashop
 ---

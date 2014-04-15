@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/rajski.jpg
 title: Rajski Smak
 tags: 
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - Drupal
 ---

@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/flesz.jpg
 title: ZespolFlesz
 tags: 
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - html
 - css

@@ -15,11 +15,11 @@ title: Portfolio
           <h3>{{ post.title }}</h3>
         </a>
         <div class="post-info">
-          <time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>{{post.date | date: "%m/%d/%y"}}</time>
+          <time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>Data dodania: {{post.date | date: "%m/%d/%y"}}</time>
           <ul class="tag_list">
               <p>Tagi</p>
               {% for tag in post.tags %}
-              <li class="inline archive_list"><a class="tag_list_link" href="/tag/{{ tag }}">{{ tag }}</a></li>
+              <li class="inline archive_list"><a class="tag_list_link" href="/tag/{{ tag }}.html">{{ tag }}</a></li>
               {% endfor %}
           </ul>
         </div>

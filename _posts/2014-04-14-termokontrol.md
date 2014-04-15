@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/termokontrol.jpg
 title: Termokontrol
 tags: 
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - Drupal
 ---

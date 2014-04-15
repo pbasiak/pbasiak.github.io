@@ -3,7 +3,7 @@ layout: portfolio_entry
 image: /images/portfolio/ognistystudio.jpg
 title: OgnistyStudio
 tags: 
-- projekt graficzny
+- projekt-graficzny
 - szablon
 - Drupal
 ---
