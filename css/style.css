@@ -524,3 +524,41 @@ h1 {
   background: rgba(0, 0, 0, 0.4);
   padding: 5px;
 }
+
+/* line 217, ../sass/style.scss */
+.tag_list {
+  list-style: none;
+}
+/* line 220, ../sass/style.scss */
+.tag_list li {
+  display: inline-block;
+}
+/* line 223, ../sass/style.scss */
+.tag_list li a {
+  font-size: 12px;
+}
+
+/* line 232, ../sass/style.scss */
+.entries time {
+  line-height: 2em;
+  margin-right: 20px;
+  float: left;
+}
+/* line 238, ../sass/style.scss */
+.entries .tag_list {
+  line-height: 1em;
+  float: left;
+  padding: 0;
+}
+/* line 243, ../sass/style.scss */
+.entries .tag_list p {
+  display: inline;
+}
+/* line 247, ../sass/style.scss */
+.entries .tag_list:after {
+  clear: both;
+}
+/* line 251, ../sass/style.scss */
+.entries .tag_list li {
+  display: inline;
+}

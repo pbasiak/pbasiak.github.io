@@ -211,3 +211,45 @@ h1 {
 		padding:5px;
 	}
 }
+
+// TAGS
+
+.tag_list {
+	list-style:none;
+
+	li {
+		display:inline-block;
+
+		a {
+			font-size:12px;
+		}
+	}
+}
+
+// POST
+
+.entries {
+	time {
+		line-height:2em;
+		margin-right:20px;
+		float:left;
+
+	}
+	.tag_list {
+		line-height:1em;
+		float:left;
+		padding:0;
+
+		p {
+			display:inline;
+		}
+
+		&:after {
+			clear:both;
+		}
+
+		li {
+			display:inline;
+		}
+	}
+}
