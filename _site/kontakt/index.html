@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+ <title>  Portfolio |  pbasiak </title>
+ <meta name="description" content="pbasiak github.io home page">
+ <meta name="keywords" content="pbasiak">
+  <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico"> -->
+  <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+  
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
+  <script type="text/javascript" src="/js/functions.js"></script>
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+		$('.slide-wrapper') 
+		.after('<div class="menu">') 
+		.cycle({ 
+   		fx:     'scrollHorz', 
+    		speed:  700, 
+    		timeout: 10000, 
+    		next: '.slide-wrapper',
+    		pager:  '.menu', 
+    		next:   '.next', 
+   			prev:   '.prev'
+		});	
+	});
+</script>
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+		$('.slide-wrapper-content') 
+		.after('<div class="menu-content">') 
+		.cycle({ 
+   		fx:     'scrollHorz', 
+    		speed:  'fast', 
+    		timeout: 10000, 
+    	
+    		next:   '.next', 
+   			prev:   '.prev' 
+		});	
+	});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<link rel="import" href="/webcomponent/github-card.html">
+</head>
+
+<body>
+
+	<div id="left">
+		<div id="logo">
+			<img src="/images/logo.jpg" alt="Pawel Basiak" />
+		</div>
+		<div id="sidebar">
+			<ul id="main-menu">
+	<li class="title">Menu główne</li>
+	<li><a href="/"><span><i class="fa fa-home fa-fw"></i>Strona główna</span></a></li>
+	<li><a href="/portfolio/index.html"><span><i class="fa fa-picture-o fa-fw"></i>Portfolio</span></a></li>
+	<li><a href="/kontakt/index.html"><span><i class="fa fa-pencil fa-fw"></i>Kontakt</span></a></li>
+	<li class="title">Specyfikacja</li>
+	<li><a href="/spec/sass.html"><span><i class="fa fa-compress fa-fw"></i>SASS</span></a></li>
+	<li><a href="/spec/compass.html"><span><i class="fa fa-compress fa-fw"></i>COMPASS</span></a></li>
+	<li class="inactive"><a href="#"><span><i class="fa fa-compress fa-fw"></i>SASS+COMPASS</span></a></li>
+	<li class="inactive"><a href="#"><span><i class="fa fa-play-circle fa-fw"></i>ANIMATE MIXIN</span></a></li>
+	<li class="inactive"><a href="#"><span><i class="fa fa-list-ul fa-fw"></i>Jekyll Blog</span></a></li>
+	<li class="inactive"><a href="#"><span><i class="fa fa-edit fa-fw"></i>Sublime Text 2</span></a></li>
+	<li class="inactive"><a href="#"><span><i class="fa fa-html5 fa-fw"></i>HTML5</span></a></li>
+</ul>
+		</div>	
+		<div id="footer">
+			<p>Projekt & kod: Paweł Basiak. <a href="https://github.com/pbasiak">pbasiak on GitHub</a></p>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37336267-4', 'pbasiak.github.io');
+  ga('send', 'pageview');
+
+</script>
+		</div>
+	</div>
+
+	<div id="right">
+		<div id="site-name">
+			<h1>Paweł Basiak</h1>
+		</div>
+		<div id="content">
+			<section class="content">
+  <h2>Kontakt</h2>
+ 
+  <p>Jestem dostępny przez następujące kanały</p>
+  <ul>
+    <li><i class="fa fa-sun-o fa-fw"></i>GG: 9159554</li>
+    <li><i class="fa fa-skype fa-fw"></i>Skype: wilczek241</li>
+    <li><i class="fa fa-github fa-fw"></i>GitHub: pbasiak</li>
+    <li><i class="fa fa-facebook-square fa-fw"></i>Facebook: wkrótce!</li>
+    <li><i class="fa fa-google-plus fa-fw"></i>Google+: wkrótce!</li>
+  </ul>
+	
+	
+
+</section>
+
+		</div>
+	</div>
+
+ </body>
+</html>
