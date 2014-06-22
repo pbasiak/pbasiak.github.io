@@ -5744,7 +5744,7 @@ ul {
 }
 /* line 144, ../sass/style.scss */
 #left #logo {
-  width: 70%;
+  width: 100%;
   float: right;
   margin: 20px 20px 0 0;
 }
@@ -5758,12 +5758,11 @@ ul {
 }
 /* line 153, ../sass/style.scss */
 #left #sidebar {
-  width: 70%;
   float: right;
 }
 /* line 158, ../sass/style.scss */
 #left #footer {
-  width: 70%;
+  width: 100%;
   float: right;
   font-size: 11px;
   text-transform: uppercase;
@@ -5778,7 +5777,7 @@ ul {
 }
 /* line 171, ../sass/style.scss */
 #left #main-menu li {
-  margin: 14px 15px;
+  margin: 14px 0;
   text-align: center;
   cursor: pointer;
 }
@@ -5847,4 +5846,9 @@ ul {
   line-height: 32px;
   margin: 0;
   text-transform: uppercase;
+}
+
+/* line 250, ../sass/style.scss */
+#map {
+  height: 500px;
 }

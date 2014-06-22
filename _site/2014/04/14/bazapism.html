@@ -9,42 +9,13 @@
   <link rel="stylesheet" type="text/css" href="/css/print.css" media="print">
   <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen">
   <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+   
   
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
   <script type="text/javascript" src="/js/functions.js"></script>
 
-<script type="text/javascript" >
-	$(document).ready(function(){
-		$('.slide-wrapper') 
-		.after('<div class="menu">') 
-		.cycle({ 
-   		fx:     'scrollHorz', 
-    		speed:  700, 
-    		timeout: 10000, 
-    		next: '.slide-wrapper',
-    		pager:  '.menu', 
-    		next:   '.next', 
-   			prev:   '.prev'
-		});	
-	});
-</script>
-
-<script type="text/javascript" >
-	$(document).ready(function(){
-		$('.slide-wrapper-content') 
-		.after('<div class="menu-content">') 
-		.cycle({ 
-   		fx:     'scrollHorz', 
-    		speed:  'fast', 
-    		timeout: 10000, 
-    	
-    		next:   '.next', 
-   			prev:   '.prev' 
-		});	
-	});
-</script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <![endif]-->
@@ -66,7 +37,7 @@
 	<li class="title">Specyfikacja</li>
 	<li><a href="/spec/sass.html"><span><i class="fa fa-compress fa-fw"></i>SASS</span></a></li>
 	<li><a href="/spec/compass.html"><span><i class="fa fa-compress fa-fw"></i>COMPASS</span></a></li>
-	<li class="inactive"><a href="#"><span><i class="fa fa-compress fa-fw"></i>SASS+COMPASS</span></a></li>
+	<li><a href="/spec/leafletjs.html"><span><i class="fa fa-compress fa-fw"></i>LeafletJS - mapa</span></a></li>
 	<li class="inactive"><a href="#"><span><i class="fa fa-play-circle fa-fw"></i>ANIMATE MIXIN</span></a></li>
 	<li class="inactive"><a href="#"><span><i class="fa fa-list-ul fa-fw"></i>Jekyll Blog</span></a></li>
 	<li class="inactive"><a href="#"><span><i class="fa fa-edit fa-fw"></i>Sublime Text 2</span></a></li>

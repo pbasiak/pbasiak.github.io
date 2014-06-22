@@ -142,7 +142,7 @@ ul {
 	color: #fafafa;
 
 	#logo {
-		width: 70%;
+		width: 100%;
 		float: right;
 		margin: 20px 20px 0 0;
 		img {
@@ -151,12 +151,12 @@ ul {
 	}
 
 	#sidebar {
-		width:70%;
+		//width:70%;
 		float:right;
 	}
 
 	#footer {
-		width: 70%;
+		width: 100%;
 		float: right;
 		font-size: 11px;
 		text-transform: uppercase;
@@ -169,7 +169,7 @@ ul {
 	#main-menu {
 		list-style: none;
 		li {
-			margin: 14px 15px;
+			margin: 14px 0;
 			text-align: center;
 			cursor: pointer;
 			&.title {
@@ -242,4 +242,11 @@ ul {
 			text-transform: uppercase;
 		}
 	}
+}
+
+
+// Leaflet
+
+#map {
+	height: 500px;
 }

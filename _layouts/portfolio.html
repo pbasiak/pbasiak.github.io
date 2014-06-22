@@ -6,36 +6,6 @@
 	<script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
   <script type="text/javascript" src="/js/functions.js"></script>
 
-<script type="text/javascript" >
-	$(document).ready(function(){
-		$('.slide-wrapper') 
-		.after('<div class="menu">') 
-		.cycle({ 
-   		fx:     'scrollHorz', 
-    		speed:  700, 
-    		timeout: 10000, 
-    		next: '.slide-wrapper',
-    		pager:  '.menu', 
-    		next:   '.next', 
-   			prev:   '.prev'
-		});	
-	});
-</script>
-
-<script type="text/javascript" >
-	$(document).ready(function(){
-		$('.slide-wrapper-content') 
-		.after('<div class="menu-content">') 
-		.cycle({ 
-   		fx:     'scrollHorz', 
-    		speed:  'fast', 
-    		timeout: 10000, 
-    	
-    		next:   '.next', 
-   			prev:   '.prev' 
-		});	
-	});
-</script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <![endif]-->
