@@ -138,12 +138,11 @@ ul {
 #left {
 	background-color: #ef4338;
 	min-height: 100%;
-	text-align: right;
+	text-align: center;
 	color: #fafafa;
 
 	#logo {
 		width: 100%;
-		float: right;
 		margin: 20px 20px 0 0;
 		img {
 			@include animate(rotateIn,2s);
@@ -152,12 +151,10 @@ ul {
 
 	#sidebar {
 		//width:70%;
-		float:right;
 	}
 
 	#footer {
 		width: 100%;
-		float: right;
 		font-size: 11px;
 		text-transform: uppercase;
 
@@ -168,14 +165,16 @@ ul {
 
 	#main-menu {
 		list-style: none;
+		padding: 0;
 		li {
 			margin: 14px 0;
-			text-align: center;
+			text-align: left;
 			cursor: pointer;
 			&.title {
 				text-transform: uppercase;
 				font-size: 15px;
 				font-weight: 300;
+				cursor: auto;
 			}
 
 			&.inactive {
@@ -183,15 +182,6 @@ ul {
 					background: #c4c4c4;
 					cursor: auto;
 					position: relative;
-
-					&:before {
-						content:"wkrotce!";
-						font-size: 8px;
-						color: #fff;
-						position: absolute;
-						left: -40px;
-
-					}
 				}
 			}
 			a {
@@ -205,8 +195,14 @@ ul {
 				@include border-radius(4px);
 				min-width: 110px;
 				display: inline-block;
-				text-align: center;
 				text-transform: uppercase;
+			}
+
+			.menuTitle {
+				background: none;
+				font-size: 13px;
+				border-bottom: 1px solid rgba(255,255,255,0.8);
+				@include box-shadow(0 2px 4px rgba(0,0,0,0.3));
 			}
 		}
 	}
@@ -240,6 +236,24 @@ ul {
 			line-height: 32px;
 			margin: 0;
 			text-transform: uppercase;
+		}
+	}
+
+	.content {
+		#about {
+			#aboutBody {
+				width: 50%;
+				float: left;
+				background: #fff;
+				padding: 0 10px;
+				margin-right: 45px;
+				@include border-radius(4px);
+			}
+
+			#aboutImage {
+				width: 40%;
+				float: left;
+			}
 		}
 	}
 }

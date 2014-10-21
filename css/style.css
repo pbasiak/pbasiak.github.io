@@ -5739,16 +5739,15 @@ ul {
 #left {
   background-color: #ef4338;
   min-height: 100%;
-  text-align: right;
+  text-align: center;
   color: #fafafa;
 }
 /* line 144, ../sass/style.scss */
 #left #logo {
   width: 100%;
-  float: right;
   margin: 20px 20px 0 0;
 }
-/* line 148, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 #left #logo img {
   -webkit-animation: rotateIn 2s 0.2s ease both;
   -moz-animation: rotateIn 2s 0.2s ease both;
@@ -5756,52 +5755,41 @@ ul {
   -o-animation: rotateIn 2s 0.2s ease both;
   animation: rotateIn 2s 0.2s ease both;
 }
-/* line 153, ../sass/style.scss */
-#left #sidebar {
-  float: right;
-}
-/* line 158, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #left #footer {
   width: 100%;
-  float: right;
   font-size: 11px;
   text-transform: uppercase;
 }
-/* line 164, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 #left #footer:after {
   clear: both;
 }
-/* line 169, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 #left #main-menu {
   list-style: none;
+  padding: 0;
 }
-/* line 171, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #left #main-menu li {
   margin: 14px 0;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
 }
-/* line 175, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 #left #main-menu li.title {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 300;
+  cursor: auto;
 }
-/* line 182, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 #left #main-menu li.inactive span {
   background: #c4c4c4;
   cursor: auto;
   position: relative;
 }
-/* line 187, ../sass/style.scss */
-#left #main-menu li.inactive span:before {
-  content: "wkrotce!";
-  font-size: 8px;
-  color: #fff;
-  position: absolute;
-  left: -40px;
-}
-/* line 200, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 #left #main-menu li span {
   background: #fdfdfd;
   padding: 7px 16px;
@@ -5814,41 +5802,67 @@ ul {
   border-radius: 4px;
   min-width: 110px;
   display: inline-block;
-  text-align: center;
   text-transform: uppercase;
 }
+/* line 201, ../sass/style.scss */
+#left #main-menu li .menuTitle {
+  background: none;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-/* line 215, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 #right {
   background-color: #fafafa;
   padding-left: 30px;
   max-width: 800px;
 }
-/* line 221, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 #right #site-name h1 {
   font-size: 57px;
   font-weight: 200;
   text-transform: uppercase;
   color: #f35626;
 }
-/* line 230, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #right #front .light {
   font-weight: 300;
   font-size: 38px;
 }
-/* line 235, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 #right #front .hard {
   font-weight: 800;
   font-size: 42px;
 }
-/* line 239, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 #right #front .line {
   line-height: 32px;
   margin: 0;
   text-transform: uppercase;
 }
+/* line 244, ../sass/style.scss */
+#right .content #about #aboutBody {
+  width: 50%;
+  float: left;
+  background: #fff;
+  padding: 0 10px;
+  margin-right: 45px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 253, ../sass/style.scss */
+#right .content #about #aboutImage {
+  width: 40%;
+  float: left;
+}
 
-/* line 250, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 #map {
   height: 500px;
 }

@@ -1,0 +1,32 @@
+/* Layout */
+@import "zen";
+/* Settings */
+
+$zen-column-count: 12;
+$zen-gutters: 20px;
+
+$zen-auto-include-grid-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+$browser-minimum-versions: (
+
+  'chrome':  null,
+  'firefox': null,
+  'ie':      null,
+  'safari':  null,
+  'opera':   null
+) !default;
+
+$zen-box-sizing: border-box !default;
+
+/* Style */
+
+.left {
+	@include zen-grid-item-base();
+	@include zen-grid-item(2, 2, left);
+}
+
+.content {
+	@include zen-grid-item-base();
+	@include zen-grid-item(8, 1, right);
+}
