@@ -1,0 +1,171 @@
+/* Styles */
+@import "compass";
+/* Layout */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+
+@mixin links($link, $link-hover) {
+	@include link-colors($link, $link-hover, $link-hover, $link, $link-hover);
+}
+
+html,
+body {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	min-height: 100% !important;
+    height: 100%;
+}
+
+html {
+	width: 100%;
+	height: 100%
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	background: #3d464d;
+	min-height: 100%;
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 0.8em;
+}
+
+.sidebar {
+	float: left;
+	width: 20%;
+	max-width: 260px;
+	height: 100%;
+	position: fixed;
+	//background: url(../img/frontend.png), url(../img/bg-red.png);
+	//background-size: auto 90%, auto 90%;
+	//background-position: right 250px center, center;
+	//background-repeat:  no-repeat, repeat-x;
+	//padding-left: 13%;
+	@include box-sizing(border-box);
+
+	a {
+		@include links(#3d464d, #f35626);
+	}
+
+	.wrapper {
+		background: #EF4338;
+		//background-image: url(../img/3d.png);
+		background-size: 100% 100%;
+		height: 100%;
+		width: 100%;
+		float: right;
+		//height: 95%;
+		//margin-top: 5%;
+		position: relative;
+	}
+
+	.logo {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.navigation {
+		padding: 20px 20px 20px 50px;
+	}
+
+	.menu {
+		li {
+			margin-bottom: 15px;
+			max-width: 160px;
+
+			a {
+				display: block;
+				padding: 10px 20px;
+				text-align: center;
+				background: #fdfdfd;
+				@include box-shadow(3px 3px 1px rgba(0, 0, 0, 0.15));
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.footer {
+		color: #fff;
+		font-weight: 800;
+		font-size: 11px;
+		padding: 20px;
+		padding-right: 50px;
+		@include box-sizing(border-box);
+		text-align: right;
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+	}
+}
+
+.content {
+	float: left;
+	width: 100%;
+	margin-left: 260px;
+	background: #fafafa;
+	@include box-sizing(border-box);
+	height: 100%;
+	position: relative;
+	@include box-shadow(-3px 0 70px rgba(0,0,0,0.5));
+background: url(../img/bg-content.jpg);
+		background-repeat: repeat;
+		background-size: auto;
+	.content-wrapper {
+		position: relative;
+		max-width: 900px;
+		min-height: 100%;
+	}	
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: -33px;
+		top: 300px;
+		width: 63px;
+		height: 436px;
+		z-index: 30;
+		background: url(../img/bg-main-left.png);
+		background-repeat: no-repeat;
+	}
+
+	.page-title {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 85px;
+		line-height: 85px;
+		font-size: 36px;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #fff;
+		background: rgba(22, 12, 11, 0.7);
+		padding-left: 30px;
+	}
+
+	.main-content {
+		padding: 40px 20px 10px 70px;
+		line-height: 2em;
+		
+		font-size: 15px;
+		color: #393939;
+	}
+}
