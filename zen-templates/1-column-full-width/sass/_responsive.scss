@@ -10,7 +10,7 @@ $zen-auto-include-grid-item-base: false;
 
 $browser-minimum-versions: (
 
-  'chrome':  null, 
+  'chrome':  null,
   'firefox': null,
   'ie':      null,
   'safari':  null,
@@ -23,15 +23,11 @@ $zen-box-sizing: border-box !default;
 
 .left {
 	@include zen-grid-item-base();
-	@include zen-grid-item(2, 2, left);
+	@include zen-grid-item(12, 1, left);
 }
 
 .content {
+	@include zen-clear();
 	@include zen-grid-item-base();
-	@include zen-grid-item(10, 1, right);
-	margin: 0 auto;
-}
-
-.footer {
-	
+	@include zen-grid-item(12, 1, right);
 }

@@ -30,13 +30,13 @@ a {
 	text-align: center;
 	@include border-radius(0 0 20px 20px);
 	@include box-shadow(1px 1px 1px rgba(0,0,0,0.3));
-	height: 100px;
 
 	.logo {
 		float: left;
 		width: 20%;
 		img {
-			max-width: 50%;
+			max-height: 90px;
+			width: auto;
 		}
 	}
 
@@ -48,8 +48,6 @@ a {
 			padding: 0;
 
 			li {
-				border-bottom: 1px solid rgba(0,0,0,0.2);
-				width: 80%;
 				line-height: 1.2em;
 				display: inline-block;
 
@@ -67,14 +65,12 @@ a {
 		}
 	}
 
-	.footer {
-		font-size: 12px;
-	}
+	
 }
 
 .content {
-	.welcome { 
-		font-size: 40px; 
+	.welcome {
+		font-size: 40px;
 		color: #fdfdfd;
 		text-transform: uppercase;
 		font-weight: 300;
@@ -94,6 +90,13 @@ a {
 	background: rgba(255,255,255,0.3);
 	float: left;
 }
+
+.footer {
+		font-size: 12px;
+		@include zen-clear();
+	@include zen-grid-item-base();
+	@include zen-grid-item(12,1);
+	}
 
 @media screen and (max-device-width: 800px) {
   html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
