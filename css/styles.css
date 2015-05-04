@@ -149,7 +149,6 @@ h2 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 100%;
   position: relative;
   -moz-box-shadow: -3px 0 70px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: -3px 0 70px rgba(0, 0, 0, 0.5);
@@ -158,13 +157,13 @@ h2 {
   background-repeat: repeat;
   background-size: auto;
 }
-/* line 138, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 .content .content-wrapper {
   position: relative;
   max-width: 900px;
   min-height: 100%;
 }
-/* line 144, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 .content:before {
   content: "";
   position: absolute;
@@ -176,7 +175,7 @@ h2 {
   background: url(../img/bg-main-left.png);
   background-repeat: no-repeat;
 }
-/* line 156, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 .content .page-title {
   position: absolute;
   top: 0;
@@ -190,7 +189,7 @@ h2 {
   background: rgba(22, 12, 11, 0.7);
   padding-left: 30px;
 }
-/* line 170, ../sass/styles.scss */
+/* line 169, ../sass/styles.scss */
 .content .main-content {
   padding: 40px 20px 10px 70px;
   line-height: 2em;
