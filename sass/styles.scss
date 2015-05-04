@@ -21,6 +21,13 @@ html {
 	height: 100%;
 }
 
+ul {
+	padding-left: 20px;
+	list-style: circle;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
 * {
 	@include box-sizing(border-box);
 }
