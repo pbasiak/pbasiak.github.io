@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        {% include head.html %}
+        {% include head-test.html %}
+    </head>
+    <body class="tpl-test" onload="draw();">
+         
+        <header class="test-header">
+            <div class="logo fl db">
+                <h1><strong>PB</strong><span>Eksperymenty</span></h1>
+            </div>
+            <div class="menu fl">
+                {% include test-navigation.html %}
+            </div>
+            <div class="top fr">
+                <div class="fr">
+                    PBASIAK Eksperymenty
+                </div>
+            </div>
+        </header>
+        <div class="test-content">
+            {{content}}
+        </div>
+
+        
+
+        {% include bottom.html %}
+    </body>
+</html>

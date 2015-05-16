@@ -1,0 +1,108 @@
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+strong {
+	font-weight: 800;
+}
+
+body.tpl-test {
+	background: #FFFFFF;
+	color: #4D4E53;
+
+	h1 {
+		font-size: 40px;
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-size: 24px;
+		font-weight: 300;
+	}
+}
+
+.test-header {
+	background: #E3E7EA;
+	height: 100px;
+	padding: 20px;
+
+	.logo {
+		h1 {
+			font-size: 41px;
+			font-weight: 300;
+
+			strong {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			span {
+				font-size: 16px;
+				display: inline-block;
+				vertical-align: middle;
+				height: 14px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.menu {
+		margin-left: 40%;
+		margin-top: 20px;
+
+		.test-navigation {
+			padding: 0;
+
+			li {
+				float: left;
+				margin-right: 30px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a {
+					@include links(#4D4E53, #F35626);
+					text-transform: uppercase;
+					font-weight: 600;
+					font-size: 14px;
+					letter-spacing: 0.5px;
+				}
+			}
+		}
+	}
+}
+
+.test-content {
+	padding: 20px;
+	
+	p {
+		margin: 10px 0;
+	}
+
+	h1 {
+		margin: 20px 0;
+	}
+
+	h2 {
+		margin: 15px 0;
+	}
+
+	h3 {
+		margin: 10px 0;
+	}
+}
+
+#canvas {
+	//background: #ddd;
+	border: 1px solid #1b1b1b;
+}

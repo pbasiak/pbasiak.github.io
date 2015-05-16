@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        
+        <div class="sidebar">
+            {% include sidebar.html %}
+        </div>
+        <div class="content">
+            <div class="content-wrapper">
+                <div class="header">
+                    <h1 class="page-title">
+                        {{ page.title }}
+                    </h1>
+                </div>
+                <div class="slider">
+                    <img src="img/slide.png" alt="">
+                </div>
+                <div class="main-content">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        
+
+        {% include bottom.html %}
+    </body>
+</html>

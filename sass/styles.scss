@@ -1,11 +1,13 @@
 /* Styles */
 @import "compass";
 /* Layout */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&subset=latin,latin-ext);
 
 @mixin links($link, $link-hover) {
 	@include link-colors($link, $link-hover, $link-hover, $link, $link-hover);
 }
+
+/* Imports */
 
 html,
 body {
@@ -22,10 +24,10 @@ html {
 }
 
 ul {
-	padding-left: 20px;
-	list-style: circle;
+	list-style: none;
 	padding-top: 6px;
 	padding-bottom: 6px;
+	padding-left: 0;
 }
 
 * {
@@ -52,6 +54,12 @@ h2 {
 	font-weight: bold;
 	margin-bottom: 0.8em;
 }
+
+
+/* imports */
+
+@import "test";
+@import "front";
 
 .sidebar {
 	float: left;
@@ -172,5 +180,10 @@ background: url(../img/bg-content.jpg);
 		
 		font-size: 15px;
 		color: #393939;
+
+		ul {
+			list-style: circle;
+			padding-left: 20px;
+		}
 	}
 }
