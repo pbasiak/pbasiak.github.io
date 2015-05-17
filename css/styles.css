@@ -265,6 +265,62 @@ body.tpl-test h3 {
   margin: 1.5em 0;
 }
 
+/* line 61, ../sass/_front.scss */
+.front-portfolio {
+  position: absolute;
+  bottom: 200px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  padding-left: 40px;
+  width: 640px;
+}
+
+/* line 71, ../sass/_front.scss */
+.description {
+  display: none;
+}
+
+/* line 75, ../sass/_front.scss */
+.slick-slider {
+  height: 100%;
+}
+/* line 78, ../sass/_front.scss */
+.slick-slider .slick-list {
+  height: 100%;
+}
+/* line 82, ../sass/_front.scss */
+.slick-slider .slick-track {
+  height: 100%;
+}
+/* line 86, ../sass/_front.scss */
+.slick-slider .slick-slide {
+  max-height: 100%;
+}
+/* line 90, ../sass/_front.scss */
+.slick-slider .img {
+  max-height: 100%;
+}
+/* line 94, ../sass/_front.scss */
+.slick-slider img {
+  max-height: 100%;
+}
+
+/* .slick-dots {
+	position: absolute;
+	top: 0;
+}
+
+.slick-prev {
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+
+.slick-next {
+	position: absolute;
+	top: 30%;
+	right: 0;
+} */
 /* line 64, ../sass/styles.scss */
 .sidebar {
   float: left;

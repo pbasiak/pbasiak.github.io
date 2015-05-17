@@ -54,3 +54,61 @@
 		margin: 1.5em 0;
 	}
 }
+
+
+// Portfolio
+
+.front-portfolio {
+	position: absolute;
+	bottom: 200px;
+	//height: 400px;
+	background: rgba(0,0,0,0.2);
+	padding: 30px;
+	padding-left: 40px;
+	width: 640px;
+}
+
+.description {
+	display: none;
+}
+
+.slick-slider {
+	height: 100%;
+
+	.slick-list {
+		height: 100%;
+	}
+
+	.slick-track {
+		height: 100%;
+	}
+
+	.slick-slide {
+		max-height: 100%;
+	}
+
+	.img {
+		max-height: 100%;
+	}
+
+	img {
+		max-height: 100%;
+	}
+}
+
+/* .slick-dots {
+	position: absolute;
+	top: 0;
+}
+
+.slick-prev {
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+
+.slick-next {
+	position: absolute;
+	top: 30%;
+	right: 0;
+} */
