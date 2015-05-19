@@ -274,27 +274,31 @@ body.tpl-test h3 {
   padding-left: 40px;
   padding-bottom: 0;
   width: 100%;
+  max-height: 100%;
   color: #fff;
 }
-/* line 72, ../sass/_front.scss */
+/* line 73, ../sass/_front.scss */
 .front-portfolio img {
   float: left;
+  display: inline-block;
+  width: 50%;
 }
-/* line 76, ../sass/_front.scss */
+/* line 79, ../sass/_front.scss */
 .front-portfolio h2 {
   font-size: 36px;
   font-weight: 400;
   color: #05b5ff;
   text-transform: uppercase;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  line-height: 1em;
 }
-/* line 83, ../sass/_front.scss */
+/* line 87, ../sass/_front.scss */
 .front-portfolio h2 span {
   color: #fff;
   font-weight: 100;
 }
 
-/* line 90, ../sass/_front.scss */
+/* line 94, ../sass/_front.scss */
 .description {
   /* display: none; */
   padding-top: 40px;
@@ -302,27 +306,27 @@ body.tpl-test h3 {
   padding-right: 20px;
 }
 
-/* line 98, ../sass/_front.scss */
+/* line 102, ../sass/_front.scss */
 .slick-slider {
   height: 100%;
 }
-/* line 101, ../sass/_front.scss */
+/* line 105, ../sass/_front.scss */
 .slick-slider .slick-list {
   height: 100%;
 }
-/* line 105, ../sass/_front.scss */
+/* line 109, ../sass/_front.scss */
 .slick-slider .slick-track {
   height: 100%;
 }
-/* line 109, ../sass/_front.scss */
+/* line 113, ../sass/_front.scss */
 .slick-slider .slick-slide {
   max-height: 100%;
 }
-/* line 113, ../sass/_front.scss */
+/* line 117, ../sass/_front.scss */
 .slick-slider .img {
   max-height: 100%;
 }
-/* line 117, ../sass/_front.scss */
+/* line 121, ../sass/_front.scss */
 .slick-slider img {
   max-height: 100%;
 }

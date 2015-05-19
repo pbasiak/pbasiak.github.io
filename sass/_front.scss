@@ -67,10 +67,13 @@
 	padding-left: 40px;
 	padding-bottom: 0;
 	width: 100%;
+	max-height: 100%;
 	color: #fff;
 
 	img {
 		float: left;
+		display: inline-block;
+		width: 50%;
 	}
 
 	h2 {
@@ -79,6 +82,7 @@
 		color: #05b5ff;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+		line-height: 1em;
 
 		span {
 			color: #fff;
