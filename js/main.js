@@ -4,18 +4,20 @@ $(document).ready(function(){
 	 $('.gallery-for').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
-	  arrows: false,
+	  arrows: true,
 	  fade: true,
-	  asNavFor: '.gallery-nav'
+	  dots: true,
+
+	  /*asNavFor: '.gallery-nav'*/
 	});
-	$('.gallery-nav').slick({
+	/*$('.gallery-nav').slick({
 	  slidesToShow: 3,
 	  slidesToScroll: 1,
 	  asNavFor: '.gallery-for',
 	  dots: true,
 	  centerMode: true,
 	  focusOnSelect: true
-	});
+	});*/
 
 
 

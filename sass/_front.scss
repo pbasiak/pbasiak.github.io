@@ -60,16 +60,38 @@
 
 .front-portfolio {
 	position: absolute;
-	bottom: 200px;
+	bottom: 150px;
 	//height: 400px;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.4);
 	padding: 30px;
 	padding-left: 40px;
-	width: 640px;
+	width: 100%;
+	color: #fff;
+
+	img {
+		float: left;
+	}
+
+	h2 {
+		font-size: 36px;
+		font-weight: 300;
+		color: #05b5ff;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+		span {
+			color: #fff;
+			font-weight: 100;
+		}
+	}
 }
 
 .description {
-	display: none;
+	/* display: none; */
+	padding-top: 40px;
+	line-height: 1.5em;
+	padding-right: 20px;
+
 }
 
 .slick-slider {

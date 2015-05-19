@@ -268,39 +268,60 @@ body.tpl-test h3 {
 /* line 61, ../sass/_front.scss */
 .front-portfolio {
   position: absolute;
-  bottom: 200px;
-  background: rgba(0, 0, 0, 0.2);
+  bottom: 150px;
+  background: rgba(0, 0, 0, 0.4);
   padding: 30px;
   padding-left: 40px;
-  width: 640px;
+  width: 100%;
+  color: #fff;
 }
-
 /* line 71, ../sass/_front.scss */
-.description {
-  display: none;
+.front-portfolio img {
+  float: left;
+}
+/* line 75, ../sass/_front.scss */
+.front-portfolio h2 {
+  font-size: 36px;
+  font-weight: 300;
+  color: #05b5ff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+/* line 82, ../sass/_front.scss */
+.front-portfolio h2 span {
+  color: #fff;
+  font-weight: 100;
 }
 
-/* line 75, ../sass/_front.scss */
+/* line 89, ../sass/_front.scss */
+.description {
+  /* display: none; */
+  padding-top: 40px;
+  line-height: 1.5em;
+  padding-right: 20px;
+}
+
+/* line 97, ../sass/_front.scss */
 .slick-slider {
   height: 100%;
 }
-/* line 78, ../sass/_front.scss */
+/* line 100, ../sass/_front.scss */
 .slick-slider .slick-list {
   height: 100%;
 }
-/* line 82, ../sass/_front.scss */
+/* line 104, ../sass/_front.scss */
 .slick-slider .slick-track {
   height: 100%;
 }
-/* line 86, ../sass/_front.scss */
+/* line 108, ../sass/_front.scss */
 .slick-slider .slick-slide {
   max-height: 100%;
 }
-/* line 90, ../sass/_front.scss */
+/* line 112, ../sass/_front.scss */
 .slick-slider .img {
   max-height: 100%;
 }
-/* line 94, ../sass/_front.scss */
+/* line 116, ../sass/_front.scss */
 .slick-slider img {
   max-height: 100%;
 }
