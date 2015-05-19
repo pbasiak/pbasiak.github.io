@@ -199,7 +199,7 @@ body.tpl-test h3 {
 .front-header {
   width: 100%;
   height: 70px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
 }
 /* line 12, ../sass/_front.scss */
 .front-header .menu {
@@ -245,7 +245,7 @@ body.tpl-test h3 {
   left: 0;
   padding: 30px;
   padding-left: 40px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   width: 56%;
   line-height: 1.5em;
