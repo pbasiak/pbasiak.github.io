@@ -7,6 +7,7 @@ $(document).ready(function(){
 	  arrows: true,
 	  fade: true,
 	  dots: true,
+	  autoplay: true
 
 	  /*asNavFor: '.gallery-nav'*/
 	});

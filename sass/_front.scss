@@ -9,6 +9,21 @@
 	height: 70px;
 	background: rgba(0,0,0,0.3);
 
+	.logo {
+		float: left;
+
+		p {
+			font-size: 24px;
+			color: #fff;
+			padding: 30px 0 0 40px;
+			font-weight: 300;
+		}
+
+		strong {
+			
+		}
+	}
+
 	.menu {
 		float: right;
 		margin-top: 25px;
@@ -19,9 +34,18 @@
 			margin-right: 20px;
 
 			a {
-				@include links(#fff, #1b1b1b);
+				@include links(#fff, #fdfdfd);
 				text-transform: uppercase;
-				@include transition(all 0.3s ease);
+				@include transition(border-color 0.3s ease);
+				font-weight: 600;
+				padding: 6px 10px;
+				border: 1px solid transparent;
+
+
+				&:hover {
+					border: 1px solid #fff;
+					box-sizing:border-box;
+				}
 			}
 		}
 	}
@@ -43,6 +67,7 @@
 	h1 {
 		font-size: 36px;
 		font-weight: 100;
+		line-height: 1.2em;
 		text-transform: uppercase;
 
 		strong {
@@ -52,6 +77,33 @@
 
 	p {
 		margin: 1.5em 0;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.front-content {
+		width: 100%;
+	}
+
+	.front-header {
+		height: auto;
+		overflow: hidden;
+		.menu {
+			li {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media all and (max-height: 480px) {
+	.front-tpl {
+		background-attachment: fixed;
+	}
+	.front-content {
+		position: static;
 	}
 }
 
