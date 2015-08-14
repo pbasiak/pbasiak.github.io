@@ -2,29 +2,31 @@
 <html class="no-js" lang="">
     <head>
         {% include head.html %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body class="front-tpl">
-        
-        <header class="front-header">
-            <div class="logo">
-                <p><strong>Paweł Basiak</strong> - Frontend Developer</p>
-            </div>
-            <ul class="menu">
-                <li><a href="/">Strona Główna</a></li>
-                <li><a href="/portfolio.html">Portfolio</a></li>
-                <li><a href="/kontakt.html">Kontakt</a></li>
-                <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-            </ul>
+    <body class="front-tpl main-page">
+        {% include header.html %}
 
-        </header>
+        <div class="welcome-message">
+            <div class="mountain"></div>
+            <div class="wrapper-small">
+                <h1>Cześć <span class="bold">Wam</span></h1>
+                <p class="bold">&diams; Webdesigner &diams; Front End Developer &diams; student informatyki &diams;<br>
+                    &diams; ponad rok pracy na etacie &diams; 2 lata jako Freelancer &diams;
+                </p>
+                <p>Z tej strony Paweł Basiak. Zajmuję się tworzeniem stron www <br>oraz grafiki.
+                    Swoją przygodę zacząłem już w gimnazjum. Z początku hobby, a z czasem pasja oraz sposób na utrzymanie. Poświęcenie <br>oraz zaangażowanie w wykonywaną pracę sprawiło, że jest to moje stałe źródło utrzymania. Lubię to robić i największą satysfakcję daje mi dobrze wykonany produkt. Dużą uwagę zwracam także na rozwój swojej osoby - zarówno umiejętności interpersonalnych, jak i technicznych. 
+                    Jestem otwarty na propozycje. <a href="/kontakt.html">Skontaktuj się ze mną!</a>
+                 </p>
+            </div>
+        </div>
 
         <div class="front-content">
-            {{ content }}
+            <div class="wrapper">
+                {{ content }}
+            </div>
         </div>
+        {% include footer.html %}
         {% include bottom.html %}
     </body>
 </html>

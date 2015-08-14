@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        {% include head.html %}
+        <script src="js/main.js"></script>
+    </head>
+    <body class="default-tpl front-tpl">
+        {% include header.html %}
+
+        <div class="welcome-message">
+            <div class="wrapper">
+            	<h1>{{ page.title }}</h1>
+            </div>
+        </div>
+
+        <div class="front-content">
+            <div class="wrapper">
+                {{ page.content }}
+            </div>
+        </div>
+        {% include footer.html %}
+        {% include bottom.html %}
+    </body>
+</html>

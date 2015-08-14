@@ -3,7 +3,20 @@ layout: front
 title: Strona Główna
 ---
 
-<h1>tworzenie stron <strong>internetowych</strong></h1>
-<p>
-    Nazywam się Paweł Basiak i zajmuję się tworzeniem stron internetowych. Swoją przygodę z grafiką oraz technologiami internetowymi zacząłem 6 lat temu. Na początku to była zabawa. Z czasem przerodziło się w pasję, a następnie stało to się głównym źródłem utrzymania. Jeżeli szukasz pasjonata to dobrze trafiłeś użytkowniku! Zatrudnij mnie!
-</p>
+<h2>Ostatnie <span class="bold">Realizacje</span></h2>
+
+{% for post in site.posts %}
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  {% if post.portfolio %}
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="{{ post.url }}"><img src="{{ post.thumbnail }}" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">{{ post.excerpt }}</p>
+    </article>
+  {% endif%} <!-- end of every post that has portfolio: true -->
+
+{% endfor %} <!-- end of the loop -->

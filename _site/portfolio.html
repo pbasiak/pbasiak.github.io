@@ -10,84 +10,205 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory -->
 
-<link rel="stylesheet" href="css/screen.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="/css/screen.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-        
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
-        <script src="js/jquery.colorbox-min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body class="front-tpl">
-        
-        <header class="front-header">
-            <div class="logo">
-                <p><strong>Paweł Basiak</strong> - Frontend Developer</p>
+    <body class="default-tpl front-tpl">
+       <header class="front-header">
+            <div class="top-bar">
+                <div class="wrapper">
+                    <div class="logo">
+                        <a href="/">
+                            <div class="logo-image">
+                                <img src="/img/logo_new.png" alt="">
+                            </div>
+                            <div class="logo-description">
+                                <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                                <p><span class="bold">Front End</span> Developer</p>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="menu">
+    <li><a href="/">Strona Główna</a></li>
+    <li><a href="/portfolio.html">Portfolio</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/kontakt.html">Kontakt</a></li>
+    <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
+</ul>
+                </div>
             </div>
-            <ul class="menu">
-                <li><a href="/">Strona Główna</a></li>
-                <li><a href="/portfolio.html">Portfolio</a></li>
-                <li><a href="/kontakt.html">Kontakt</a></li>
-                <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-            </ul>
+
+            <div class="front-slider">
+                <p><span class="black">Front end</span> <span class="white">Developer</span></p>
+            </div>
 
         </header>
 
-        <div class="front-portfolio">
-            <div class="gallery-for">
-    <div>
-      <img src="slides/mockup/basmet.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>BASMET</h2>
-        <p>Strona dla małego przedsiębiorstwa. Moim zadaniem było zaprojektowanie a następnie zakodowanie do Drupala. Do aktualnych zadań należy do mnie opieka i dalszy rozwój witryny.</p>
-      </div>
-    </div>
-
-    <div>
-      <img src="slides/mockup/ognisty.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>Ognisty Studio</h2>
-        <p>Wideofilmowanie to niewątpliwie trudny zawód. Przyszedłem z pomocą, która polegała na zaprojektowaniu grafiki strony internetowej
-          oraz zakodowanie do Drupala.</p>
-      </div>
-    </div>
-    <div>
-      <img src="slides/mockup/inwestycja.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>Nowoczesna Inwestycja</h2>
-        <p>Na Nowoczesnej Inwestycji wykonałem projekt graficzny oraz kodowanie do Drupala.</p>
-      </div>
-    </div>
-    <div>
-      <img src="slides/mockup/zegrze.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>ZEGRZE360</h2>
-        <p>Niewątpliwie jeden z ciekawszych projektów. Współpraca polegała na wdrożeniu dostarczonego projektu graficznego oraz wykonanie podstron dostosowując je do całokształtu.</p>
-      </div>
-    </div>
-
-</div>
-
-<!-- <div class="gallery-nav">
-  <div>
-      <img src="slides/thumb/basmet.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/ognisty.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/inwestycje.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/zegrze.jpg" alt="">
-  </div>
-
-</div> -->
+        <div class="welcome-message">
+            <div class="wrapper">
+            	<h1>Portfolio</h1>
+            </div>
         </div>
-        
+
+        <div class="front-content">
+            <div class="wrapper">
+                
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2015/08/studio-urody"><img src="./img/portfolio-thumb/studio-urody.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">Adobe Photoshop, HTML5, CSS3, SASS&COMPASS, 
+Responsive, jQuery, Drupal
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2015/05/sztormgrupa"><img src="./img/portfolio-thumb/sztormgrupa.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">PHP, HTML5, CSS3, jQuery, Wordpress
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2015/04/wzap"><img src="./img/portfolio-thumb/wzap.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">HTML5, CSS3, jQuery
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2015/02/stesar"><img src="./img/portfolio-thumb/stesar.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">HTML5, CSS3, Wordpress
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2015/01/restauracja-biancas"><img src="./img/portfolio-thumb/biancas.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">HTML5, CSS3, Wordpress, Szkolenie
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2014/09/fiorino"><img src="./img/portfolio-thumb/fiorino.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">Grafika
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
+
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="/2014/09/dakarshop"><img src="./img/portfolio-thumb/dakarshop.jpg" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">Grafika, Smarty, HTML5, CSS3, SASS&COMPASS, Prestashop
+
+
+</p>
+    </article>
+   <!-- end of every post that has portfolio: true -->
+
+ <!-- end of the loop -->
+            </div>
+        </div>
+        <footer class="page-footer">
+	<div class="wrapper">
+		<div class="logo">
+			<div class="logo-image">
+	            <img src="/img/logo_new_light.png" alt="">
+	        </div>
+	        <div class="logo-description">
+	            <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+	            <p><span class="bold">Front-end</span> Developer</p>
+	        </div>
+		</div>
+
+		<div class="contact">
+			<p class="phone">+48 792 516 921</p>
+			<p class="awesome">
+				<ul>
+					<li><a href=""><i class="fa fa-phone"></i></a></li>
+					<li><a href=""><i class="fa fa-sun-o"></i></a></li>
+					<li><a href=""><i class="fa fa-skype"></i></a></li>
+					<li><a href=""><i class="fa fa-behance"></i></a></li>
+					<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+					<li><a href=""><i class="fa fa-envelope"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter"></i></a></li>
+					<li><a href=""><i class="fa fa-facebook"></i></a></li>
+					<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</p>
+		</div>
+	</div>
+</footer>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
