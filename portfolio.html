@@ -1,54 +1,20 @@
 ---
-layout: front-portfolio
-title: Strona Główna
+layout: default
+title: Portfolio
 ---
 
-<div class="gallery-for">
-    <div>
-      <img src="slides/mockup/basmet.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>BASMET</h2>
-        <p>Strona dla małego przedsiębiorstwa. Moim zadaniem było zaprojektowanie a następnie zakodowanie do Drupala. Do aktualnych zadań należy do mnie opieka i dalszy rozwój witryny.</p>
-      </div>
-    </div>
+{% for post in site.posts %}
+<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
 
-    <div>
-      <img src="slides/mockup/ognisty.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>Ognisty Studio</h2>
-        <p>Wideofilmowanie to niewątpliwie trudny zawód. Przyszedłem z pomocą, która polegała na zaprojektowaniu grafiki strony internetowej
-          oraz zakodowanie do Drupala.</p>
-      </div>
-    </div>
-    <div>
-      <img src="slides/mockup/inwestycja.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>Nowoczesna Inwestycja</h2>
-        <p>Na Nowoczesnej Inwestycji wykonałem projekt graficzny oraz kodowanie do Drupala.</p>
-      </div>
-    </div>
-    <div>
-      <img src="slides/mockup/zegrze.png" alt="">
-      <div class="description">
-        <h2><span>PROJEKT: </span>ZEGRZE360</h2>
-        <p>Niewątpliwie jeden z ciekawszych projektów. Współpraca polegała na wdrożeniu dostarczonego projektu graficznego oraz wykonanie podstron dostosowując je do całokształtu.</p>
-      </div>
-    </div>
+  <!-- this time we only want posts where portfolio is true (or set at all) --> 
+  {% if post.portfolio %}
+    <article class="portfolio--article">
+      <!-- the title-->
+        <p><a href="{{ post.url }}"><img src="{{ post.thumbnail }}" alt=""></a></p>
+      
+        <!-- the content -->
+      <p class="excerpt">{{ post.excerpt }}</p>
+    </article>
+  {% endif%} <!-- end of every post that has portfolio: true -->
 
-</div>
-
-<!-- <div class="gallery-nav">
-  <div>
-      <img src="slides/thumb/basmet.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/ognisty.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/inwestycje.jpg" alt="">
-  </div>
-  <div>
-      <img src="slides/thumb/zegrze.jpg" alt="">
-  </div>
-
-</div> -->
+{% endfor %} <!-- end of the loop -->
