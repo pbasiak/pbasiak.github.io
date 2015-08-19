@@ -3,13 +3,16 @@ layout: default
 title: Blog
 ---
 
-<ul>
+<ul class="blog--list">
   {% for post in site.posts %}
 	  {% if post.portfolio %}
 	  	<!-- nothing -->
 	  {% else %}
-		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a>
+		<li class="blog--article">
+			<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<div class="post-date">
+				{{ post.date | date: '%d.%m.%Y' }}
+			</div>
 		</li>
 	  {% endif %} <!-- end of every post that has portfolio: true -->
 

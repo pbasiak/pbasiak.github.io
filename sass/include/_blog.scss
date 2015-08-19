@@ -1,0 +1,40 @@
+.front-content {
+	.blog--list {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+.blog--list {
+	.blog--article {
+		margin-bottom: 30px;
+		border-bottom: 1px solid #ddd;
+		position: relative;
+		@include box-sizing(border-box);
+	}
+
+	.post-title {
+		a {
+			font-size: 32px;
+			font-weight: 600;
+			display: block;
+			padding-left: 10px;
+			line-height: 4em;
+			background: transparent;
+			@include transition(all 0.2s ease-in-out);
+
+			&:hover {
+				background: url(../img/bg-post.jpg) no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+
+	.post-date {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: 14px;
+		color: rgb(156, 156, 156);
+	}
+}

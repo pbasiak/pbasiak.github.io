@@ -74,6 +74,7 @@ h5 {
 
 @import "front";
 @import "include/portfolio";
+@import "include/blog";
 
 .default-tpl {
 	.front-header {
@@ -103,9 +104,15 @@ h5 {
 
 .front-content {
 	padding: 40px 0;
+
+	ul {
+		list-style-type: disc;
+		padding-left: 30px;
+	}
 }
 
 .page-footer {
+	clear: both;
 	background: $black;
 	padding: 40px 0;
 	overflow: hidden;

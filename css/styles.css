@@ -97,7 +97,7 @@ h5 {
 .front-tpl .front-header {
   height: 485px;
   background: url(../img/bg-header.jpg) -25px -50px;
-  background-size: calc(100% + 50px);
+  background-size: calc(100% + 100px);
 }
 /* line 9, ../sass/_front.scss */
 .front-tpl .top-bar {
@@ -135,7 +135,7 @@ h5 {
   font-size: 24px;
   font-weight: 300;
 }
-/* line 45, ../sass/_front.scss */
+/* line 46, ../sass/_front.scss */
 .front-tpl .front-slider {
   font-size: 60px;
   text-align: center;
@@ -143,11 +143,19 @@ h5 {
   font-weight: 900;
   line-height: 2.8em;
 }
-/* line 52, ../sass/_front.scss */
+/* line 61, ../sass/_front.scss */
+.front-tpl .front-slider span {
+  line-height: 1em;
+}
+/* line 65, ../sass/_front.scss */
+.front-tpl .front-slider .black {
+  text-align: right;
+}
+/* line 71, ../sass/_front.scss */
 .front-tpl .front-slider .white {
   color: #fff;
 }
-/* line 57, ../sass/_front.scss */
+/* line 79, ../sass/_front.scss */
 .front-tpl .welcome-message {
   position: relative;
   height: 315px;
@@ -157,11 +165,11 @@ h5 {
   padding: 40px 0;
   text-align: center;
 }
-/* line 66, ../sass/_front.scss */
+/* line 88, ../sass/_front.scss */
 .front-tpl .welcome-message h1 {
   text-transform: uppercase;
 }
-/* line 70, ../sass/_front.scss */
+/* line 92, ../sass/_front.scss */
 .front-tpl .welcome-message a {
   font-weight: 900;
   color: #ecf0f1;
@@ -182,7 +190,7 @@ h5 {
 .front-tpl .welcome-message a:active {
   color: #2f3d4c;
 }
-/* line 75, ../sass/_front.scss */
+/* line 97, ../sass/_front.scss */
 .front-tpl .welcome-message .mountain {
   position: static;
   width: 766px;
@@ -191,13 +199,13 @@ h5 {
   margin-top: -257px;
   background: url(../img/bg-welcme.png) no-repeat;
 }
-/* line 85, ../sass/_front.scss */
+/* line 107, ../sass/_front.scss */
 .front-tpl .menu {
   float: right;
   display: inline-block;
   padding-top: 35px;
 }
-/* line 90, ../sass/_front.scss */
+/* line 112, ../sass/_front.scss */
 .front-tpl .menu li {
   float: left;
   height: 60px;
@@ -205,15 +213,15 @@ h5 {
   border-right: 1px solid #f6f8f8;
   border-left: 1px solid #e1e4e5;
 }
-/* line 97, ../sass/_front.scss */
+/* line 119, ../sass/_front.scss */
 .front-tpl .menu li:first-child {
   border-left: 0;
 }
-/* line 101, ../sass/_front.scss */
+/* line 123, ../sass/_front.scss */
 .front-tpl .menu li:last-child {
   border-right: 0;
 }
-/* line 105, ../sass/_front.scss */
+/* line 127, ../sass/_front.scss */
 .front-tpl .menu li a {
   color: #d3574a;
   font-weight: 900;
@@ -238,65 +246,251 @@ h5 {
   color: #2f3d4c;
 }
 
-/* line 1, ../sass/include/_portfolio.scss */
-.portfolio--article {
-  width: 33%;
-  display: inline-block;
-  vertical-align: top;
+/* line 2, ../sass/include/_portfolio.scss */
+.front-content .portfolio--list {
+  padding: 0;
+  list-style: none;
 }
 
-/* line 79, ../sass/styles.scss */
+/* line 8, ../sass/include/_portfolio.scss */
+.portfolio--article {
+  width: 33.222%;
+  float: left;
+  /* min-height: 400px; */
+  padding-right: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media all and (max-width: 768px) {
+  /* line 8, ../sass/include/_portfolio.scss */
+  .portfolio--article {
+    width: 50%;
+  }
+}
+@media all and (max-width: 480px) {
+  /* line 8, ../sass/include/_portfolio.scss */
+  .portfolio--article {
+    width: 100%;
+  }
+}
+/* line 23, ../sass/include/_portfolio.scss */
+.portfolio--article .excerpt {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  background: #D3574A;
+  padding-left: 10px;
+  color: #fff;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 3px solid #7D0C00;
+}
+/* line 37, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-wrapper {
+  position: relative;
+}
+/* line 41, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-wrapper:hover .post-thumb-hover {
+  display: block;
+}
+/* line 47, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  border-top: 2px solid #2F3D4C;
+}
+/* line 53, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb img {
+  max-width: 100%;
+}
+/* line 58, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover {
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background: transparent;
+}
+/* line 71, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 78, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* line 82, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover:hover a {
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+/* line 91, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover:hover a span {
+  display: block;
+}
+/* line 95, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover a {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+  top: -24px;
+  left: 0;
+  /* line-height: 62px; */
+  /* padding: 20px; */
+  background: transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+/* line 108, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover a:hover {
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+/* line 117, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover a span {
+  display: none;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* line 126, ../sass/include/_portfolio.scss */
+.portfolio--article .post-thumb-hover i {
+  font-size: 36px;
+}
+
+/* line 2, ../sass/include/_blog.scss */
+.front-content .blog--list {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 9, ../sass/include/_blog.scss */
+.blog--list .blog--article {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 17, ../sass/include/_blog.scss */
+.blog--list .post-title a {
+  font-size: 32px;
+  font-weight: 600;
+  display: block;
+  padding-left: 10px;
+  line-height: 4em;
+  background: transparent;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 26, ../sass/include/_blog.scss */
+.blog--list .post-title a:hover {
+  background: url(../img/bg-post.jpg) no-repeat;
+  background-size: cover;
+}
+/* line 33, ../sass/include/_blog.scss */
+.blog--list .post-date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #9c9c9c;
+}
+
+/* line 80, ../sass/styles.scss */
 .default-tpl .front-header {
   height: 150px;
   background: url(../img/bg-header-small.jpg) no-repeat;
   background-size: cover;
 }
-/* line 85, ../sass/styles.scss */
+/* line 86, ../sass/styles.scss */
 .default-tpl .welcome-message {
   height: auto;
   text-align: left;
   padding: 20px 0;
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 .contact-list i {
   width: 25px;
   text-align: center;
   padding-right: 5px;
 }
-/* line 99, ../sass/styles.scss */
+/* line 100, ../sass/styles.scss */
 .contact-list li {
   margin-bottom: 10px;
 }
 
-/* line 104, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .front-content {
   padding: 40px 0;
 }
-
 /* line 108, ../sass/styles.scss */
+.front-content ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+/* line 114, ../sass/styles.scss */
 .page-footer {
+  clear: both;
   background: #2f3d4c;
   padding: 40px 0;
   overflow: hidden;
   color: #ecf0f1;
 }
-/* line 114, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .page-footer .logo {
   padding-top: 0;
 }
-/* line 118, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .page-footer .contact {
   float: right;
   font-size: 30px;
   font-weight: 800;
   text-align: right;
 }
-/* line 124, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 .page-footer .contact a {
   color: #ecf0f1;
 }
-/* line 128, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .page-footer .contact li {
   float: left;
   margin-left: 20px;

@@ -1,5 +1,130 @@
+.front-content {
+	.portfolio--list {
+		padding: 0;
+		list-style: none;
+	}
+}
+
 .portfolio--article {
-	width: 33%;
-	display: inline-block;
-	vertical-align: top;
+	width: 33.222%;
+	float: left;
+	/* min-height: 400px; */
+	padding-right: 20px;
+	@include box-sizing(border-box);
+
+	@media all and (max-width: 768px) {
+		width: 50%;
+	}
+
+	@media all and (max-width: 480px) {
+		width: 100%;
+	}
+
+	.excerpt {
+		//height: 50px;
+		padding-top: 10px;
+		margin-bottom: 20px;
+		background: #D3574A;
+		padding-left: 10px;
+		color: #fff;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		font-size: 14px;
+		border-bottom: 3px solid #7D0C00;
+	}
+
+	.post-thumb-wrapper	{
+		position: relative;
+
+		&:hover {
+			.post-thumb-hover {
+				display: block;
+			}
+		}
+	}
+
+	.post-thumb {
+		display: block;
+		height: auto;
+		overflow: hidden;
+		border-top: 2px solid #2F3D4C;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.post-thumb-hover {
+		/* display: none; */
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		@include transition(all 1s ease);
+		background: transparent;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		&:hover {
+			background: rgba(0,0,0,0.7);
+		}
+
+		&:hover a {
+			background: #fff;
+			top: 0;
+			left: 0;
+			width: 48px;
+			height: 48px;
+			padding: 0;
+		}
+
+		&:hover a span {
+			display: block;
+		}
+
+		a {
+			display: inline-block;
+			position: relative;
+			width: 0;
+			height: 0;
+			top: -24px;
+			left: 0;
+			/* line-height: 62px; */
+			/* padding: 20px; */
+			background: transparent;
+			@include border-radius(50%);
+			@include transition(all 1s ease-in-out);
+
+			&:hover {
+				background: #fff;
+				top: 0;
+				left: 0;
+				width: 48px;
+				height: 48px;
+				padding: 0;
+			}
+
+			span {
+				display: none;
+				position: absolute;
+				left: 7px;
+				top: 7px;
+				@include transition(all 1s ease);
+			}
+		}
+
+		i {
+			font-size: 36px;
+		}
+	}
 }

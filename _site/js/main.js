@@ -11,3 +11,12 @@ $(document).ready(function() {
 	          $('.front-header').css("background-position", newvalueX+"px     "+newvalueY+"px");
 	});
 });
+
+
+$(window).load(function(){
+	$('.portfolio--list').masonry({
+	  // options
+	  itemSelector: '.portfolio--article',
+	  columnWidth: '.portfolio--article'
+	});
+});

@@ -2,19 +2,20 @@
 layout: default
 title: Portfolio
 ---
-
+<ul class="portfolio--list">
 {% for post in site.posts %}
-<!-- again we loop through the posts, because technically the Portfolio Stuff is a post -->
 
-  <!-- this time we only want posts where portfolio is true (or set at all) --> 
   {% if post.portfolio %}
-    <article class="portfolio--article">
-      <!-- the title-->
-        <p><a href="{{ post.url }}"><img src="{{ post.thumbnail }}" alt=""></a></p>
+    <li class="portfolio--article">
+        <div class="post-thumb-wrapper">
+        	<a class="post-thumb" href="{{ post.url }}"><img src="{{ post.thumbnail }}" alt=""></a>
+	    	<div class="post-thumb-hover">
+	    		<a href="{{ post.url }}"><span class="field-content"><i class="fa fa-link"></i></span></a>
+	    	</div>
+        </div>
       
-        <!-- the content -->
       <p class="excerpt">{{ post.excerpt }}</p>
-    </article>
-  {% endif%} <!-- end of every post that has portfolio: true -->
-
-{% endfor %} <!-- end of the loop -->
+    </li>
+  {% endif%} 
+{% endfor %}
+</ul>
