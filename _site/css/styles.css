@@ -5,26 +5,27 @@ body {
   color: #313c48;
   background: #eff2f3;
   line-height: 1.5em;
+  font-size: 16px;
 }
 
-/* line 18, ../sass/styles.scss */
+/* line 19, ../sass/styles.scss */
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* line 23, ../sass/styles.scss */
+/* line 24, ../sass/styles.scss */
 .wrapper-small {
   max-width: 520px;
   margin: 0 auto;
 }
 
-/* line 28, ../sass/styles.scss */
+/* line 29, ../sass/styles.scss */
 p {
   margin-bottom: 14px;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 a {
   text-decoration: none;
   -moz-transition: all 0.3s ease;
@@ -50,47 +51,59 @@ a:active {
   color: #2f3d4c;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 h1 {
   font-size: 36px;
   line-height: 2em;
-  font-weight: 300;
+  font-weight: 600;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 h2 {
   font-size: 30px;
   line-height: 2em;
-  font-weight: 300;
+  font-weight: 600;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 h3 {
   line-height: 2em;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 h4 {
   line-height: 2em;
   font-size: 18px;
+  font-weight: 600;
 }
 
-/* line 62, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 h5 {
   line-height: 2em;
   font-size: 16px;
+  font-weight: 600;
 }
 
-/* line 67, ../sass/styles.scss */
+/* line 70, ../sass/styles.scss */
 .bold {
   font-weight: 800;
 }
 
-/* line 71, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 .strong {
   font-weight: 900;
+}
+
+/* line 78, ../sass/styles.scss */
+strong {
+  font-weight: 800;
+}
+
+/* line 82, ../sass/styles.scss */
+.thin {
+  font-weight: 300;
 }
 
 /* line 2, ../sass/_front.scss */
@@ -246,6 +259,95 @@ h5 {
   color: #2f3d4c;
 }
 
+/* line 138, ../sass/_front.scss */
+.skills {
+  clear: both;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* line 143, ../sass/_front.scss */
+.skills .skills--list {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 149, ../sass/_front.scss */
+.skills-item {
+  width: 33%;
+  max-width: 380px;
+  float: left;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+/* line 156, ../sass/_front.scss */
+.skills-item h4 {
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 161, ../sass/_front.scss */
+.skills-item .skill-wrapper {
+  background: #e1e4e5;
+  position: relative;
+  width: 380px;
+  height: 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.07) inset;
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.07) inset;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.07) inset;
+}
+/* line 169, ../sass/_front.scss */
+.skills-item .skill-wrapper > span {
+  display: inline-block;
+  background: #e55e50;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  height: 100%;
+}
+/* line 176, ../sass/_front.scss */
+.skills-item .skill-wrapper .tooltip {
+  position: absolute;
+  top: -32px;
+  margin-left: -15px;
+  font-size: 11px;
+  padding: 0 3px;
+  color: #fff;
+  background: #2f3d4c;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 186, ../sass/_front.scss */
+.skills-item .skill-wrapper .tooltip:after {
+  border-color: #333 transparent;
+  border-style: solid;
+  border-width: 5px 5px 0px;
+  bottom: -5px;
+  content: "";
+  display: block;
+  left: 8px;
+  position: absolute;
+  width: 0px;
+}
+/* line 200, ../sass/_front.scss */
+.skills-item .description {
+  font-size: 12px;
+  height: 48px;
+  overflow: hidden;
+}
+
+/* line 207, ../sass/_front.scss */
+.extra-info {
+  font-size: 11px;
+}
+
+/* line 211, ../sass/_front.scss */
+.page-footer {
+  clear: both;
+}
+
 /* line 2, ../sass/include/_portfolio.scss */
 .front-content .portfolio--list {
   padding: 0;
@@ -391,6 +493,11 @@ h5 {
   font-size: 36px;
 }
 
+/* line 133, ../sass/include/_portfolio.scss */
+.portfolio--main-img {
+  text-align: center;
+}
+
 /* line 2, ../sass/include/_blog.scss */
 .front-content .blog--list {
   list-style: none;
@@ -433,41 +540,41 @@ h5 {
   color: #9c9c9c;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 .default-tpl .front-header {
   height: 150px;
   background: url(../img/bg-header-small.jpg) no-repeat;
   background-size: cover;
 }
-/* line 86, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 .default-tpl .welcome-message {
   height: auto;
   text-align: left;
   padding: 20px 0;
 }
 
-/* line 94, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .contact-list i {
   width: 25px;
   text-align: center;
   padding-right: 5px;
 }
-/* line 100, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 .contact-list li {
   margin-bottom: 10px;
 }
 
-/* line 105, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .front-content {
   padding: 40px 0;
 }
-/* line 108, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .front-content ul {
   list-style-type: disc;
   padding-left: 30px;
 }
 
-/* line 114, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .page-footer {
   clear: both;
   background: #2f3d4c;
@@ -475,22 +582,22 @@ h5 {
   overflow: hidden;
   color: #ecf0f1;
 }
-/* line 121, ../sass/styles.scss */
+/* line 132, ../sass/styles.scss */
 .page-footer .logo {
   padding-top: 0;
 }
-/* line 125, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .page-footer .contact {
   float: right;
   font-size: 30px;
   font-weight: 800;
   text-align: right;
 }
-/* line 131, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 .page-footer .contact a {
   color: #ecf0f1;
 }
-/* line 135, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 .page-footer .contact li {
   float: left;
   margin-left: 20px;

@@ -135,7 +135,82 @@
 	}
 }
 
+.skills {
+	clear: both;
+	margin-bottom: 20px;
+	overflow: hidden;
+	
+	.skills--list {
+		list-style: none;
+		padding: 0;
+	}
+}
 
+.skills-item {
+	width: 33%;
+	max-width: 380px;
+	float: left;
+	margin-bottom: 20px;
+	padding-right: 20px;
+
+	h4 {
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.skill-wrapper {
+		background: #e1e4e5;
+		position: relative;
+		width: 380px;
+		height: 20px;
+		@include border-radius(10px);
+		@include box-shadow(3px 3px 4px rgba(0,0,0,0.07) inset);
+
+		> span {
+			display: inline-block;
+			background: #e55e50;
+			@include border-radius(10px);
+			height: 100%;
+		}
+
+		.tooltip {
+			position: absolute;
+			top: -32px;
+			margin-left: -15px;
+			font-size: 11px;
+			padding: 0 3px;
+			color: #fff;
+			background: $black;
+			@include border-radius(4px);
+
+			&:after {
+				border-color: #333 transparent;
+				border-style: solid;
+				border-width: 5px 5px 0px;
+				bottom: -5px;
+				content: "";
+				display: block;
+				left: 8px;
+				position: absolute;
+				width: 0px;
+			}
+		}
+	}
+
+	.description {
+		font-size: 12px;
+		height: 48px;
+		overflow: hidden;
+	}
+}
+
+.extra-info {
+	font-size: 11px;
+}
+
+.page-footer {
+	clear: both;
+}
 
 // .rw-words{
 // 	display: inline;
