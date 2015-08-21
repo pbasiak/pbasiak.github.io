@@ -92,6 +92,10 @@ strong {
 		height: 150px;
 		background: url(../img/bg-header-small.jpg) no-repeat;
 		background-size: cover;
+
+		@media all and (max-width: 768px) {
+			height: auto;
+		}
 	}
 
 	.welcome-message {
