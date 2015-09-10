@@ -1,0 +1,71 @@
+.btn.btn-trans {
+	background: transparent;
+	color: #fff;
+}
+
+.btn.btn-light {
+	background: $base-color;
+	font-weight: bold;
+	color: #fff;
+
+	&:hover {
+		color: $helper-color;
+	}
+}
+
+.btn-border {
+	border-right: 10px solid rgb(213, 213, 213);
+
+	&:hover {
+		border-right: 10px solid $helper-color;
+	}
+}
+
+.btn.btn-border2 {
+	border-bottom: 3px solid $helper-color;
+	color: $helper-color;
+
+	&:hover {
+		border-bottom: 3px solid #fff;
+		color: #fff;
+	}
+}
+
+
+.fit {
+	font-weight: 300;
+}
+
+.fat {
+	font-weight: 700;
+}
+
+
+/* FEATURE BOX */
+
+.feature-box {
+	clear: both;
+	margin-bottom: 40px;
+
+	h3 {
+		font-size: 19px;
+		margin-bottom: 0;
+		color: $helper-color;
+	}
+
+	.feature-box-icon {
+		float: left;
+		width: 35px;
+		height: 35px;
+		background: $helper-color;
+		@include border-radius(50%);
+		text-align: center;
+		margin-right: 15px;
+		font-size: 18px;
+
+		span {
+			line-height: 34px;
+			color: #fff;
+		}
+	}
+}

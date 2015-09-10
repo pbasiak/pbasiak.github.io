@@ -1,0 +1,5 @@
+@import "compass/typography/links/link-colors";
+
+@mixin links($link, $link-hover) {
+	@include link-colors($link, $link-hover, $link-hover, $link, $link-hover);
+}

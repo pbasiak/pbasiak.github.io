@@ -1,0 +1,32 @@
+.section-img {
+	background: url(../img/bg-header.jpg);
+	background-position: center center;
+	position: relative;
+	color: $section-img-text;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $section-img-heading;
+	}
+
+	> .container {
+		position: relative;
+		z-index: 100;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: $section-bg-overlay;
+	}
+}
