@@ -1,0 +1,25 @@
+.footer {
+	background: $footer-bg;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: $footer-text;
+
+	.navbar {
+		border: 0;
+	}
+
+	.nav > li > a {
+		&:hover,
+		&:focus {
+			background: $base-color;
+		}
+	}
+
+	.copy {
+		line-height: 3em;
+	}
+
+	a {
+		@include links($footer-link, $footer-link-hover);
+	}
+}

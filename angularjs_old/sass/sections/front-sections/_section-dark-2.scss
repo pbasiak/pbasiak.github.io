@@ -1,0 +1,49 @@
+.section-dark-2 {
+	color: #fff;
+	background: $base-color url(../img/bg-email.png) center center no-repeat;
+	background-size: auto 100%;
+	position: relative;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #fff;
+	}
+
+	.overlay {
+		position: absolute;
+		background: rgba(0,0,0,0.4);
+		left: 0;
+		right: 0;
+		top: 10%;
+		bottom: 10%;
+		height: 80%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.beforelay {
+		position: relative;
+		z-index: 10;
+	}
+
+	.button--light {
+		@include box-shadow(0 1px 0 rgba(255,255,255,1));
+
+		&:hover {
+			@include box-shadow(0 1px 0 $helper-color);
+		}
+	}
+
+	.form-control {
+		background: #fff;
+		border: 0;
+		border-bottom: 2px solid darken($base-color, 20);
+		padding: 0 1em;
+		height: 3.5em;
+		color: #fff;
+	}
+}

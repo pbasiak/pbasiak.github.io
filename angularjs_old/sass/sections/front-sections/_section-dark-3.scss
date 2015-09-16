@@ -1,0 +1,32 @@
+.section-dark-3 {
+	background: darken($base-color, 3) url(../img/bg-dark.jpg) center center no-repeat;
+	background-size: auto 100%;
+	margin-top: 20px;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #fff;
+	}
+
+	.form-control {
+		background: darken($base-color, 7);
+		border: 0;
+		border-bottom: 2px solid darken($base-color, 20);
+		padding: 0 1em;
+		height: 3.5em;
+		color: #fff;
+	}
+
+	.button--light {
+		border-bottom: 1px solid #fff;
+		@include box-shadow(0 0 20px rgba(0, 0, 0, 0.4));
+
+		&:hover {
+			border-bottom: 1px solid $helper-color;
+		}
+	}
+}

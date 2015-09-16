@@ -1,0 +1,69 @@
+////  Colors
+
+/// Base
+$base-color: #411860;
+$helper-color: #FF5E1E; //ff7e00
+
+
+$base-heading: #180923;
+
+/// Header
+
+// Tło
+$header-bg: url(../img/bg-header-2.jpg);
+$header-bg-overlay: rgba(12,5,18,0.6);
+$header-nav-bg: rgba(0,0,0,0.4);
+
+// Nagłówki
+$header-h1: #fff;
+$header-h2: #fff;
+$header-h3: #fff;
+$header-h4: #fff;
+$header-h5: #fff;
+$header-h6: #fff;
+
+// Tekst
+$header-text: #d5d5d5;
+
+// Linki
+$header-link: $helper-color;
+$header-link-hover: lighten($helper-color, 15);
+
+$header-nav-link: #FFE6DC;
+$header-nav-link-hover: lighten($helper-color, 15);
+$header-nav-link-bg: transparent;
+
+/// Header-bottom 
+$header-bottom-bg: darken($base-color, 15);
+
+// Section
+
+
+$section-bg-overlay: rgba(12,5,18,0.5);
+
+// Section Dark
+
+$section-dark-heading: #1b1b1b;
+
+$section-dark-text: #1b1b1b;
+
+$section-dark-bg: #f5f5f5;
+
+// Section IMG
+
+$section-img-heading: #f5f5f5;
+
+$section-img-text: #d5d5d5;
+
+
+// Footer
+
+$footer-bg: darken($base-color, 15);
+$footer-text: #ddd;
+
+$footer-link: #ddd;
+$footer-link-hover: $helper-color;
+
+//// Fonts
+
+$base-font: 'Lato', sans-serif;

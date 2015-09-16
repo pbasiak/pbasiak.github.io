@@ -1,0 +1,32 @@
+.section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-weight: 800;
+	}
+
+	h1 span,
+	h2 span,
+	h3 span,
+	h4 span {
+		color: $base-color;
+	}
+}
+
+.special {
+	h2 {
+		color: $helper-color;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+}
+
+.block-center {
+	float: none;
+	margin: 0 auto;
+}
