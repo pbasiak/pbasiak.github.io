@@ -1,0 +1,26 @@
+html,
+body {
+	/* width: 100%; */
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background: url(index.jpg) no-repeat;
+	background-position: center top;
+	background-size: auto auto;
+}
+
+@media all and (max-width: 1200px) {
+	body {
+		background-size: 1200px auto;
+	}
+}
+
+a {
+	height: 4910px;
+	display: block;
+}
