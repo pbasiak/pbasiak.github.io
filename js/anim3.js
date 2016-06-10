@@ -1,5 +1,5 @@
 function canvasAnim() {
-    if ($(window).width() > 480) {
+    if ($(window).width() > 1024) {
     (function() {
 
         var width, height, largeHeader, canvas, ctx, triangles, target, animateHeader = true;
