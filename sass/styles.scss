@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,900,700,300&subset=latin,latin-ext);
 @import "compass";
 $white: #ecf0f1;
-$red: #d3574a;
+$red: #26ADE4;
 $black: #2f3d4c;
 
 @mixin links($link, $link-hover) {
@@ -10,15 +10,23 @@ $black: #2f3d4c;
 
 body {
 	font-family: 'Roboto', sans-serif;
-	color: #313c48;
-	background: #eff2f3;
+	color: #000;
+	background: #fff;
 	line-height: 1.5em;
 	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
+
+	@media all and (max-width: 1200px) {
+		padding: 0 15px;
+	}
 }
 
 .wrapper-small {
@@ -36,35 +44,40 @@ a {
 	@include links($red, $black);
 }
 
+h1,h2,h3,h4,h5,h6 {
+	margin: 1.5em 0;
+	line-height: 1.5em;
+}
+
 
 h1 {
-	font-size: 36px;
-	line-height: 2em;
+	font-size: 48px;
 	font-weight: 600;
 }
 
 h2 {
-	font-size: 30px;
-	line-height: 2em;
+	font-size: 36px;
 	font-weight: 600;
 }
 
 h3 {
 	line-height: 2em;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 600;
 }
 
 h4 {
-	line-height: 2em;
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 600;
 }
 
 h5 {
-	line-height: 2em;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 600;
+}
+
+h6 {
+	font-size: 16px;
 }
 
 .bold {
@@ -83,14 +96,39 @@ strong {
 	font-weight: 300;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.visuallyHidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
 @import "front";
 @import "include/portfolio";
 @import "include/blog";
+@import "include/contact";
+@import "include/about";
+//@import "include/grid";
+@import "include/header";
+@import "include/logo-text";
+@import "include/default-tpl";
+@import "include/tooltip";
+@import "include/btns";
+@import "include/grid-effect";
+@import "include/exp-counter";
+@import "include/grid-hover-effect";
 
 .default-tpl {
 	.front-header {
 		height: 150px;
-		background: url(../img/bg-header-small.jpg) no-repeat;
 		background-size: cover;
 
 		@media all and (max-width: 768px) {
@@ -119,6 +157,19 @@ strong {
 
 .front-content {
 	padding: 40px 0;
+	background: url(../img/pattern.jpg);
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 200%;
+		top: 0;
+		height: 40px;
+		background: #fff;
+		transform: rotate(0.6deg);
+	}
 
 	ul {
 		list-style-type: disc;
@@ -128,13 +179,29 @@ strong {
 
 .page-footer {
 	clear: both;
-	background: $black;
+	background: #000;
 	padding: 40px 0;
 	overflow: hidden;
-	color: $white;
+	color: #fff;
 
 	.logo {
 		padding-top: 0;
+
+		@media all and (max-width: 767px) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+	}
+
+	.logo-image {
+		@media all and (max-width: 767px) {
+			float: none;
+		}
+	}
+
+	.logo-description p {
+		color: #fff;
 	}
 
 	.contact {
@@ -142,14 +209,24 @@ strong {
 		font-size: 30px;
 		font-weight: 800;
 		text-align: right;
+
+		@media all and (max-width: 767px) {
+			width: 100%;
+			text-align: center;
+		}
 		
 		a {
-			color: $white;
+			color: #26ADE4;
 		}
 
 		li {
 			float: left;
 			margin-left: 20px;
+
+			@media all and (max-width: 767px) {
+				float: none;
+				display: inline-block;
+			}
 		}
 	}
 }

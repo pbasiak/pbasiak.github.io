@@ -1,23 +1,81 @@
 <header class="front-header">
-            <div class="top-bar">
-                <div class="wrapper">
-                    <div class="logo">
-                        <a href="/">
-                            <div class="logo-image">
-                                <img src="{{ site.baseurl }}/img/logo_new.png" alt="">
+    <div class="top-bar large">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-image">
+                         <svg viewBox="0 0 600 500" class="svg-defs">
+
+                            <!-- Symbol with text -->
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                                    PB
+                                </text>
+                            </symbol>
+
+                            <!-- Mask with text -->
+                            <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                                <rect width="100%" height="100%" class="mask__shape">
+                                </rect>
+                                <use xlink:href="#s-text" class="mask__text"></use>
+
+                            </mask>
+                        </svg>
+
+                        <div class="box-with-text">
+
+                            <!-- Container for video -->
+                            <div class="text-fill">
+                                <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
                             </div>
-                            <div class="logo-description">
-                                <p class="site-name">Paweł <span class="bold">Basiak</span></p>
-                                <p><span class="bold">Front End</span> Developer</p>
-                            </div>
-                        </a>
+
+                            <!-- Visible SVG -->
+                            <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                                <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                                <use xlink:href="#s-text" class="text--transparent"></use>
+                            </svg>
+                        </div>
                     </div>
-                    {% include menu.html %}
-                </div>
+                    <div class="logo-description">
+                        <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                        <p><span class="bold">Front End</span> Developer</p>
+                    </div>
+                </a>
             </div>
+            {% include menu.html %}
+        </div>
+    </div>
 
-            <div class="front-slider">
-                <p><span class="black">Front end</span> <span class="white">Developer</span></p>
-            </div>
+    <div id="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <div class="front-header-text-2">
+            <span>Projektuję & tworzę</span>
+            <span>strony internetowe</span>
+        </div>
+        <div class="front-header-text">
+            <span>Front end developer</span>
+        </div>
 
-        </header>
+        <div class="front-header-btns">
+            <a href="/portfolio" class="button button--antiman button--round-l button--text-medium">Zobacz portfolio</a>
+            <a href="/kontakt" class="button button--antiman button--round-l button--text-medium">Skontaktuj się!</a>
+        </div>
+    </div>
+</header>
+
+
+<script src="/js/tweenlite.min.js"></script>
+<script src="/js/easepack.min.js"></script>
+<script src="/js/raf.js"></script>
+<script src="/js/anim3.js"></script>
+
+<script>
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>100){
+      $(".top-bar").removeClass("large").addClass("small");
+  } else{
+      $(".top-bar").removeClass("small").addClass("large");
+  }
+});
+</script>

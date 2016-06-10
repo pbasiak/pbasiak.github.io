@@ -15,323 +15,224 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
-        <script src="js/main.js"></script>
+
     </head>
-    <body class="default-tpl front-tpl">
-       <header class="front-header">
-            <div class="top-bar">
-                <div class="wrapper">
-                    <div class="logo">
-                        <a href="/">
-                            <div class="logo-image">
-                                <img src="/img/logo_new.png" alt="">
+    <body class="default-tpl main-page">
+        <div class="page-header">
+            <header class="front-header">
+    <div class="top-bar large">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-image">
+                         <svg viewBox="0 0 600 500" class="svg-defs">
+
+                            <!-- Symbol with text -->
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                                    PB
+                                </text>
+                            </symbol>
+
+                            <!-- Mask with text -->
+                            <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                                <rect width="100%" height="100%" class="mask__shape">
+                                </rect>
+                                <use xlink:href="#s-text" class="mask__text"></use>
+
+                            </mask>
+                        </svg>
+
+                        <div class="box-with-text">
+
+                            <!-- Container for video -->
+                            <div class="text-fill">
+                                <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
                             </div>
-                            <div class="logo-description">
-                                <p class="site-name">Paweł <span class="bold">Basiak</span></p>
-                                <p><span class="bold">Front End</span> Developer</p>
-                            </div>
-                        </a>
+
+                            <!-- Visible SVG -->
+                            <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                                <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                                <use xlink:href="#s-text" class="text--transparent"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <ul class="menu">
-    <li><a href="/">Strona Główna</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-</ul>
-                </div>
+                    <div class="logo-description">
+                        <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                        <p><span class="bold">Front End</span> Developer</p>
+                    </div>
+                </a>
             </div>
+            <nav class="menu menu--iris">
+	<button class="mobile">Menu</button>
+	<ul class="menu__list">
+	    
+			
+			  <li class="menu__item"><a class="menu__link" href="/">Strona Główna</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/kontakt">Kontakt</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/omnie">O mnie</a></li>
+			
+		
+			
+			  <li class="menu__item menu__item--current"><a href="/portfolio" class="menu__link">Portfolio</a></li>
+			
+		
+	</ul>
+</nav>
 
-            <div class="front-slider">
-                <p><span class="black">Front end</span> <span class="white">Developer</span></p>
-            </div>
-
-        </header>
-
-        <div class="welcome-message">
-            <div class="wrapper">
-            	<h1>Portfolio</h1>
-            </div>
+<script>
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$(this).next('.menu__list').toggleClass('active')
+		});
+	});
+</script>
+        </div>
+    </div>
+</header>
+<script>
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>100){
+      $(".top-bar").removeClass("large").addClass("small");
+  } else{
+      $(".top-bar").removeClass("small").addClass("large");
+  }
+});
+</script>
         </div>
 
         <div class="front-content">
-            <div class="wrapper">
-                <ul class="portfolio--list">
+            <div class="wrapperx">
+                <div class="wrapper">
+  <h1><span class="thin">Wybrane</span> realizacje</h1>
+</div>
+<ul class="portfolio--list gridhover">
 
 
+  
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/zusmiechem/1.png" alt=""/>
+      <figcaption>
+        <h2>Warsztatyz<span>uśmiechem</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/warsztaty">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/strona-domowa-pawel-basiak"><img src="./img/portfolio-thumb/pbasiak.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/strona-domowa-pawel-basiak"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/strona-domowa-pawel-basiak">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, jQuery, Jekyll
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/altemedia/1.png" alt=""/>
+      <figcaption>
+        <h2>Szkolenia <span>Altemedia</span></h2>
+        <p>Projekt graficzny / kodowanie</p>
+        <a href="/realizacja/altemedia">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/burley-tobacco-trading-poland"><img src="./img/portfolio-thumb/burley.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/burley-tobacco-trading-poland"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/burley-tobacco-trading-poland">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/burley/1.png" alt=""/>
+      <figcaption>
+        <h2>Burley <span>Tobacco</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/burley">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/kamerzystaslask"><img src="./img/portfolio-thumb/kamerzysta.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/kamerzystaslask"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/kamerzystaslask">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/victoria/1.png" alt=""/>
+      <figcaption>
+        <h2>Victoria <span>Wałbrzych</span></h2>
+        <p>Projekt graficzny / Kodowanie (Wordpress)</p>
+        <a href="/realizacja/victoria">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/studio-urody"><img src="./img/portfolio-thumb/studio-urody.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/studio-urody"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/studio-urody">Adobe Photoshop, HTML5, CSS3, SASS&COMPASS, 
-Responsive, jQuery, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/sztormgrupa/1.png" alt=""/>
+      <figcaption>
+        <h2>Sztorm <span>Grupa</span></h2>
+        <p>Kodowanie (Wordpress)</p>
+        <a href="/realizacja/sztormgrupa">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/06/zegrze360"><img src="./img/portfolio-thumb/zegrze.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/06/zegrze360"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/06/zegrze360">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/kamerzysta/1.png" alt=""/>
+      <figcaption>
+        <h2>Kamerzysta <span>Śląsk</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/kamerzysta">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/06/dbamyoogrody"><img src="./img/portfolio-thumb/ogrody.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/06/dbamyoogrody"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/06/dbamyoogrody">Grafika, HTML5, CSS3, SASS&COMPASS, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/zegrze360/1.png" alt=""/>
+      <figcaption>
+        <h2>Zegrze<span>360</span></h2>
+        <p>Kodowanie (Drupal)</p>
+        <a href="/realizacja/zegrze360">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/05/sztormgrupa"><img src="./img/portfolio-thumb/sztormgrupa.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/05/sztormgrupa"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/05/sztormgrupa">PHP, HTML5, CSS3, jQuery, Responsywny, Wordpress
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/onlinehurt/1.png" alt=""/>
+      <figcaption>
+        <h2>Online <span>Hurt</span></h2>
+        <p>Kodowanie (cStore)</p>
+        <a href="/realizacja/onlinehurt">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/04/alfafloors"><img src="./img/portfolio-thumb/alfafloors.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/04/alfafloors"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/04/alfafloors">CSS3, Wordpress
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/romix/1.png" alt=""/>
+      <figcaption>
+        <h2>Ro<span>mix</span></h2>
+        <p>Kodowanie (cStore)</p>
+        <a href="/realizacja/romix">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/04/wzap"><img src="./img/portfolio-thumb/wzap.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/04/wzap"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/04/wzap">HTML5, CSS3, jQuery
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/02/nowoczesnainwestycja"><img src="./img/portfolio-thumb/nowoczesnainwestycja.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/02/nowoczesnainwestycja"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/02/nowoczesnainwestycja">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/02/stesar"><img src="./img/portfolio-thumb/stesar.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/02/stesar"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/02/stesar">HTML5, CSS3, Wordpress
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/01/restauracja-biancas"><img src="./img/portfolio-thumb/biancas.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/01/restauracja-biancas"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/01/restauracja-biancas">HTML5, CSS3, Wordpress, Szkolenie
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2014/09/basmet"><img src="./img/portfolio-thumb/basmet.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2014/09/basmet"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2014/09/basmet">Grafika, HTML5, CSS3, SASS&COMPASS, Drupal
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2014/09/fiorino"><img src="./img/portfolio-thumb/fiorino.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2014/09/fiorino"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2014/09/fiorino">Grafika
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2014/09/dakarshop"><img src="./img/portfolio-thumb/dakarshop.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2014/09/dakarshop"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2014/09/dakarshop">Grafika, Smarty, HTML5, CSS3, SASS&COMPASS, Prestashop
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2014/04/wilczasaga"><img src="./img/portfolio-thumb/wilczasaga.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2014/04/wilczasaga"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2014/04/wilczasaga">Grafika, HTML5, CSS3, Wordpress
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/agrobaza/1.png" alt=""/>
+      <figcaption>
+        <h2>Agro<span>baza</span></h2>
+        <p>Kodowanie (Wordpress)</p>
+        <a href="/realizacja/agrobaza">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 </ul>
@@ -341,8 +242,39 @@ Responsive, jQuery, Drupal
 	<div class="wrapper">
 		<div class="logo">
 			<div class="logo-image">
-	            <img src="/img/logo_new_light.png" alt="">
-	        </div>
+                 <svg viewBox="0 0 600 500" class="svg-defs">
+
+                    <!-- Symbol with text -->
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                            PB
+                        </text>
+                    </symbol>
+
+                    <!-- Mask with text -->
+                    <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                        <rect width="100%" height="100%" class="mask__shape">
+                        </rect>
+                        <use xlink:href="#s-text" class="mask__text"></use>
+
+                    </mask>
+                </svg>
+
+                <div class="box-with-text">
+
+                    <!-- Container for video -->
+                    <div class="text-fill">
+                        <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
+                    </div>
+
+                    <!-- Visible SVG -->
+                    <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                        <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+                    </svg>
+                </div>
+            </div>
 	        <div class="logo-description">
 	            <p class="site-name">Paweł <span class="bold">Basiak</span></p>
 	            <p><span class="bold">Front-end</span> Developer</p>

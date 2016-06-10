@@ -1,7 +1,20 @@
-<ul class="menu">
-    <li><a href="/">Strona Główna</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-</ul>
+<nav class="menu menu--iris">
+	<button class="mobile">Menu</button>
+	<ul class="menu__list">
+	    {% for node in site.pages %}
+			{% if page.url == node.url %}
+			  <li class="menu__item menu__item--current"><a href="{{node.url}}" class="menu__link">{{node.title}}</a></li>
+			{% else %}
+			  <li class="menu__item"><a class="menu__link" href="{{node.url}}">{{node.title}}</a></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>
+
+<script>
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$(this).next('.menu__list').toggleClass('active')
+		});
+	});
+</script>

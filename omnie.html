@@ -1,0 +1,79 @@
+---
+layout: default
+title: O mnie
+---
+
+<div class="wrapper page-omnie about-me">
+	<h1 class="text-center"><span class="thin">O</span> mnie</h1>
+
+	<div class="onepage">
+		<section class="about-desc">
+			<img src="/img/about/photo.png" alt="">
+			<p>Pasjonuję się projektowaniem oraz tworzeniem profesjalnych stron internetowych. Z przyjemnością łączę te elementy w codziennej pracy. Dzięki współpracy z zaufanymi firmami jestem w stanie kompleksowo wykonać strony.
+			Ciągle się rozwijam, stawiam coraz wyższe cele oraz wykonuję swoje 
+			czynności <strong>perfekcyjnie</strong>. </p>
+		</section>
+	</div>
+</div>
+
+<script src="/js/countUp.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var expYears = new CountUp("expYears", 0, 4);
+    var expProjects = new CountUp("expProjects", 0, 60);
+    var expCode = new CountUp("expCode", 0, 120);
+
+    
+
+    $(window).scroll(function(){
+
+      var top_expCounter = $("#expCounter").offset().top;
+      var height_expCounter = $("#expCounter").outerHeight();
+      var wH = $(window).height();
+
+      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
+        expYears.start();
+        expProjects.start();
+        expCode.start();
+      }
+    });
+  });
+</script>
+
+<div class="experience">
+  <div class="wrapper">
+    <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
+    <ul id="expCounter">
+      <li><div class="exp-row"><span id="expYears"></span><span>+</span></div><div class="exp-description">lat doświadczenia</div></li>
+      <li><div class="exp-row"><span id="expProjects"></span><span>+</span></div><div class="exp-description">projektów</div></li>
+      <li><div class="exp-row"><span id="expCode"></span><span>+</span></div><div class="exp-description">tysięcy linii kodu</div></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="wrapper page-omnie">
+	<section class="about-conf">
+		<h2 class="text-center"><span class="thin">Działania</span> dodatkowe</h2>
+		<img src="/img/about/infoshare.png" alt="">
+		<p>Aby polepszyć wykonywane usługi, należy być na bieżąco z technologiami oraz otwartym na doświadczenie innych. W tym roku uczestniczyłem w największej tego typu konferencji w centralnej Europie - <strong>infoShare</strong>. Edycja 2016 wywarła na mnie pozytywne wrażenie i z pewnością udam się na kolejną.</p> 
+	</section>
+
+	<section class="about-cert">
+		<h3 class="text-center">Certyfikat</h3>
+		<img src="/img/about/cert.png" alt="">
+		<p>Znając wiele technologii stajemy się lepszymi programistami, projektantami. Pod koniec 2015 roku zdobyłem certyfikat z .NET.
+			Uważam, że jest to bardzo interesujący język.</p> 
+	</section>
+</div>
+
+
+<div class="about-place">
+  <div class="wrapper">
+    <h2><span class="thin">Miejsce</span> pracy</h2>
+    <p class="section-desc">
+      Moim miejscem jest Gdańsk. To bardzo piękne nadmorskie miasto. Duża ilość dróg rowerowych sprawia, że w ciepłe dni udaję się na wycieczki rowerem. Jest to dla mnie sposób na efektywny relaks. Dzięki temu regeneruję siły i odświeżam swoją kreatywność.
+    </p>
+  </div>
+</div>

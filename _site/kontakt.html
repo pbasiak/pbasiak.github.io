@@ -15,70 +15,237 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
-        <script src="js/main.js"></script>
+
     </head>
-    <body class="default-tpl front-tpl">
-        <header class="front-header">
-            <div class="top-bar">
-                <div class="wrapper">
-                    <div class="logo">
-                        <a href="/">
-                            <div class="logo-image">
-                                <img src="/img/logo_new.png" alt="">
+    <body class="default-tpl main-page">
+        <div class="page-header">
+            <header class="front-header">
+    <div class="top-bar large">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-image">
+                         <svg viewBox="0 0 600 500" class="svg-defs">
+
+                            <!-- Symbol with text -->
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                                    PB
+                                </text>
+                            </symbol>
+
+                            <!-- Mask with text -->
+                            <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                                <rect width="100%" height="100%" class="mask__shape">
+                                </rect>
+                                <use xlink:href="#s-text" class="mask__text"></use>
+
+                            </mask>
+                        </svg>
+
+                        <div class="box-with-text">
+
+                            <!-- Container for video -->
+                            <div class="text-fill">
+                                <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
                             </div>
-                            <div class="logo-description">
-                                <p class="site-name">Paweł <span class="bold">Basiak</span></p>
-                                <p><span class="bold">Front End</span> Developer</p>
-                            </div>
-                        </a>
+
+                            <!-- Visible SVG -->
+                            <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                                <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                                <use xlink:href="#s-text" class="text--transparent"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <ul class="menu">
-    <li><a href="/">Strona Główna</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-</ul>
-                </div>
+                    <div class="logo-description">
+                        <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                        <p><span class="bold">Front End</span> Developer</p>
+                    </div>
+                </a>
             </div>
+            <nav class="menu menu--iris">
+	<button class="mobile">Menu</button>
+	<ul class="menu__list">
+	    
+			
+			  <li class="menu__item"><a class="menu__link" href="/">Strona Główna</a></li>
+			
+		
+			
+			  <li class="menu__item menu__item--current"><a href="/kontakt" class="menu__link">Kontakt</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/omnie">O mnie</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/portfolio">Portfolio</a></li>
+			
+		
+	</ul>
+</nav>
 
-            <div class="front-slider">
-                <p><span class="black">Front end</span> <span class="white">Developer</span></p>
-            </div>
-
-        </header>
-
-        <div class="welcome-message">
-            <div class="wrapper">
-            	<h1>Kontakt</h1>
-            </div>
+<script>
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$(this).next('.menu__list').toggleClass('active')
+		});
+	});
+</script>
+        </div>
+    </div>
+</header>
+<script>
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>100){
+      $(".top-bar").removeClass("large").addClass("small");
+  } else{
+      $(".top-bar").removeClass("small").addClass("large");
+  }
+});
+</script>
         </div>
 
         <div class="front-content">
-            <div class="wrapper">
-                <div class="main-content post-content">
-                    <h2>Dostępne formy kontaktu</h2>
+            <div class="wrapperx">
+                <div class="wrapper page-contact">
+	<h1 class="visuallyHidden"><span class="thin">Skontaktuj </span>się</h1>
 
-<ul class="contact-list">
-	<li><i class="fa fa-phone"></i> +48 792 516 921</li>
-	<li><i class="fa fa-sun-o"></i> 9159554</li>
-	<li><i class="fa fa-skype"></i> pawel.basiak01</li>
-	<li><i class="fa fa-behance"></i> <a href="https://www.behance.net/pbasiak">Profil Behance</a></li>
-	<li><i class="fa fa-linkedin"></i> <a href="https://pl.linkedin.com/pub/pawe%C5%82-basiak/a7/b73/325">Profil Linkedin</a></li>
-	<li><i class="fa fa-envelope"></i> pawel.basiak01 ( małpa ) gmail ( kropka ) com</li>
-	<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/pbasiak01">Profil Twitter</a></li>
-	<li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/pawelb3">Profil Facebook</a></li>
-	<li><i class="fa fa-google-plus"></i> <a href="https://plus.google.com/u/0/109429575263842418559/posts">Profil Google+</a></li>
-</ul>
-                </div>
+	<div class="row">
+		<div class="contact-data">
+			<h2><span class="thin">Dane</span> kontaktowe</h2>
+			<p class="p-medium">Podobają Ci się moje realizacje? <br>
+			Skontaktuj się!</p>
+			<p>
+				Paweł Basiak <br>
+				<a href="mailto:pbbasiak@gmail.com"><i class="fa fa-envelope"></i> pbbasiak@gmail.com</a><br>
+				<i class="fa fa-phone"></i> +48 792 516 921
+			</p>
+			<p>
+				Możliwość spotkania w <strong>Trójmieście</strong>. <br>
+				Poza tym obszarem - do ustalenia.
+			</p>
+
+			<ul class="social-icons">
+				<li><a href="skype:pawel.basiak01"><i class="fa fa-skype"></i></a></li>
+				<li><a href="https://twitter.com/pbasiak01"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.facebook.com/pawelb3"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://plus.google.com/u/0/109429575263842418559/posts"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="https://pl.linkedin.com/pub/pawe%C5%82-basiak/a7/b73/325"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://www.behance.net/pbasiak"><i class="fa fa-behance"></i></a></li>
+			</ul>
+		</div>
+		<div class="contact-form">
+			<h2><span class="thin">Formularz</span> kontaktowy</h2>
+			<form action="https://formspree.io/pbbasiak@gmail.com"
+			      method="POST">
+			    <span class="input input--hoshi">
+					<input name="name" class="input__field input__field--hoshi" type="text" id="input-4" required />
+					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						<span class="input__label-content input__label-content--hoshi">Imię i nazwisko</span>
+					</label>
+				</span>
+				<span class="input input--hoshi">
+					<input name="email" class="input__field input__field--hoshi" type="email" id="input-5" required />
+					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+						<span class="input__label-content input__label-content--hoshi">Email</span>
+					</label>
+				</span>
+				<span class="input input--hoshi">
+					<input name="thema" class="input__field input__field--hoshi" type="text" id="input-6" required />
+					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
+						<span class="input__label-content input__label-content--hoshi">Temat</span>
+					</label>
+				</span>
+				<span class="input textarea input--hoshi">
+					<span class="textarealabel">Wiadomość</span>
+					<textarea name="data" type="text" id="input-7" required></textarea>
+				</span>
+				<span class="submit">
+					<input type="submit" value="Wyślij">
+				</span>
+			</form> 
+		</div>
+	</div>
+</div>
+
+<script src="/js/classie.js"></script>
+<script>
+	(function() {
+		// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+		if (!String.prototype.trim) {
+			(function() {
+				// Make sure we trim BOM and NBSP
+				var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+				String.prototype.trim = function() {
+					return this.replace(rtrim, '');
+				};
+			})();
+		}
+
+		[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+			// in case the input is already filled..
+			if( inputEl.value.trim() !== '' ) {
+				classie.add( inputEl.parentNode, 'input--filled' );
+			}
+
+			// events:
+			inputEl.addEventListener( 'focus', onInputFocus );
+			inputEl.addEventListener( 'blur', onInputBlur );
+		} );
+
+		function onInputFocus( ev ) {
+			classie.add( ev.target.parentNode, 'input--filled' );
+		}
+
+		function onInputBlur( ev ) {
+			if( ev.target.value.trim() === '' ) {
+				classie.remove( ev.target.parentNode, 'input--filled' );
+			}
+		}
+	})();
+</script>
             </div>
         </div>
         <footer class="page-footer">
 	<div class="wrapper">
 		<div class="logo">
 			<div class="logo-image">
-	            <img src="/img/logo_new_light.png" alt="">
-	        </div>
+                 <svg viewBox="0 0 600 500" class="svg-defs">
+
+                    <!-- Symbol with text -->
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                            PB
+                        </text>
+                    </symbol>
+
+                    <!-- Mask with text -->
+                    <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                        <rect width="100%" height="100%" class="mask__shape">
+                        </rect>
+                        <use xlink:href="#s-text" class="mask__text"></use>
+
+                    </mask>
+                </svg>
+
+                <div class="box-with-text">
+
+                    <!-- Container for video -->
+                    <div class="text-fill">
+                        <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
+                    </div>
+
+                    <!-- Visible SVG -->
+                    <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                        <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+                    </svg>
+                </div>
+            </div>
 	        <div class="logo-description">
 	            <p class="site-name">Paweł <span class="bold">Basiak</span></p>
 	            <p><span class="bold">Front-end</span> Developer</p>

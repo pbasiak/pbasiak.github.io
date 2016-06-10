@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>O mnie | Paweł Basiak - Web Designer, Front end developer</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link rel="stylesheet" href="/css/screen.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+
+    </head>
+    <body class="default-tpl main-page">
+        <div class="page-header">
+            <header class="front-header">
+    <div class="top-bar large">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-image">
+                         <svg viewBox="0 0 600 500" class="svg-defs">
+
+                            <!-- Symbol with text -->
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                                    PB
+                                </text>
+                            </symbol>
+
+                            <!-- Mask with text -->
+                            <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                                <rect width="100%" height="100%" class="mask__shape">
+                                </rect>
+                                <use xlink:href="#s-text" class="mask__text"></use>
+
+                            </mask>
+                        </svg>
+
+                        <div class="box-with-text">
+
+                            <!-- Container for video -->
+                            <div class="text-fill">
+                                <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
+                            </div>
+
+                            <!-- Visible SVG -->
+                            <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                                <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                                <use xlink:href="#s-text" class="text--transparent"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="logo-description">
+                        <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                        <p><span class="bold">Front End</span> Developer</p>
+                    </div>
+                </a>
+            </div>
+            <nav class="menu menu--iris">
+	<button class="mobile">Menu</button>
+	<ul class="menu__list">
+	    
+			
+			  <li class="menu__item"><a class="menu__link" href="/">Strona Główna</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/kontakt">Kontakt</a></li>
+			
+		
+			
+			  <li class="menu__item menu__item--current"><a href="/omnie" class="menu__link">O mnie</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/portfolio">Portfolio</a></li>
+			
+		
+	</ul>
+</nav>
+
+<script>
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$(this).next('.menu__list').toggleClass('active')
+		});
+	});
+</script>
+        </div>
+    </div>
+</header>
+<script>
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>100){
+      $(".top-bar").removeClass("large").addClass("small");
+  } else{
+      $(".top-bar").removeClass("small").addClass("large");
+  }
+});
+</script>
+        </div>
+
+        <div class="front-content">
+            <div class="wrapperx">
+                <div class="wrapper page-omnie about-me">
+	<h1 class="text-center"><span class="thin">O</span> mnie</h1>
+
+	<div class="onepage">
+		<section class="about-desc">
+			<img src="/img/about/photo.png" alt="">
+			<p>Pasjonuję się projektowaniem oraz tworzeniem profesjalnych stron internetowych. Z przyjemnością łączę te elementy w codziennej pracy. Dzięki współpracy z zaufanymi firmami jestem w stanie kompleksowo wykonać strony.
+			Ciągle się rozwijam, stawiam coraz wyższe cele oraz wykonuję swoje 
+			czynności <strong>perfekcyjnie</strong>. </p>
+		</section>
+	</div>
+</div>
+
+<script src="/js/countUp.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var expYears = new CountUp("expYears", 0, 4);
+    var expProjects = new CountUp("expProjects", 0, 60);
+    var expCode = new CountUp("expCode", 0, 120);
+
+    
+
+    $(window).scroll(function(){
+
+      var top_expCounter = $("#expCounter").offset().top;
+      var height_expCounter = $("#expCounter").outerHeight();
+      var wH = $(window).height();
+
+      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
+        expYears.start();
+        expProjects.start();
+        expCode.start();
+      }
+    });
+  });
+</script>
+
+<div class="experience">
+  <div class="wrapper">
+    <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
+    <ul id="expCounter">
+      <li><div class="exp-row"><span id="expYears"></span><span>+</span></div><div class="exp-description">lat doświadczenia</div></li>
+      <li><div class="exp-row"><span id="expProjects"></span><span>+</span></div><div class="exp-description">projektów</div></li>
+      <li><div class="exp-row"><span id="expCode"></span><span>+</span></div><div class="exp-description">tysięcy linii kodu</div></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="wrapper page-omnie">
+	<section class="about-conf">
+		<h2 class="text-center"><span class="thin">Działania</span> dodatkowe</h2>
+		<img src="/img/about/infoshare.png" alt="">
+		<p>Aby polepszyć wykonywane usługi, należy być na bieżąco z technologiami oraz otwartym na doświadczenie innych. W tym roku uczestniczyłem w największej tego typu konferencji w centralnej Europie - <strong>infoShare</strong>. Edycja 2016 wywarła na mnie pozytywne wrażenie i z pewnością udam się na kolejną.</p> 
+	</section>
+
+	<section class="about-cert">
+		<h3 class="text-center">Certyfikat</h3>
+		<img src="/img/about/cert.png" alt="">
+		<p>Znając wiele technologii stajemy się lepszymi programistami, projektantami. Pod koniec 2015 roku zdobyłem certyfikat z .NET.
+			Uważam, że jest to bardzo interesujący język.</p> 
+	</section>
+</div>
+
+
+<div class="about-place">
+  <div class="wrapper">
+    <h2><span class="thin">Miejsce</span> pracy</h2>
+    <p class="section-desc">
+      Moim miejscem jest Gdańsk. To bardzo piękne nadmorskie miasto. Duża ilość dróg rowerowych sprawia, że w ciepłe dni udaję się na wycieczki rowerem. Jest to dla mnie sposób na efektywny relaks. Dzięki temu regeneruję siły i odświeżam swoją kreatywność.
+    </p>
+  </div>
+</div>
+            </div>
+        </div>
+        <footer class="page-footer">
+	<div class="wrapper">
+		<div class="logo">
+			<div class="logo-image">
+                 <svg viewBox="0 0 600 500" class="svg-defs">
+
+                    <!-- Symbol with text -->
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                            PB
+                        </text>
+                    </symbol>
+
+                    <!-- Mask with text -->
+                    <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                        <rect width="100%" height="100%" class="mask__shape">
+                        </rect>
+                        <use xlink:href="#s-text" class="mask__text"></use>
+
+                    </mask>
+                </svg>
+
+                <div class="box-with-text">
+
+                    <!-- Container for video -->
+                    <div class="text-fill">
+                        <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
+                    </div>
+
+                    <!-- Visible SVG -->
+                    <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                        <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+                    </svg>
+                </div>
+            </div>
+	        <div class="logo-description">
+	            <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+	            <p><span class="bold">Front-end</span> Developer</p>
+	        </div>
+		</div>
+
+		<div class="contact">
+			<p class="phone">+48 792 516 921</p>
+			<p class="awesome">
+				<ul>
+					<li><a href="gg:9159554"><i class="fa fa-sun-o"></i></a></li>
+					<li><a href="skype:pawel.basiak01"><i class="fa fa-skype"></i></a></li>
+					<li><a href="https://www.behance.net/pbasiak"><i class="fa fa-behance"></i></a></li>
+					<li><a href="https://pl.linkedin.com/pub/pawe%C5%82-basiak/a7/b73/325"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="/kontakt.html"><i class="fa fa-envelope"></i></a></li>
+					<li><a href="https://twitter.com/pbasiak01"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://www.facebook.com/pawelb3"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://plus.google.com/u/0/109429575263842418559/posts"><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</p>
+		</div>
+	</div>
+</footer>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-37336267-4','auto');ga('send','pageview');
+</script>
+    </body>
+</html>

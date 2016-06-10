@@ -2,20 +2,21 @@
 layout: default
 title: Portfolio
 ---
-<ul class="portfolio--list">
+<div class="wrapper">
+  <h1><span class="thin">Wybrane</span> realizacje</h1>
+</div>
+<ul class="portfolio--list gridhover">
 {% for post in site.posts %}
 
   {% if post.portfolio %}
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="{{ post.url }}"><img src="{{ post.thumbnail }}" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="{{ post.url }}"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="{{ post.url }}">{{ post.excerpt }}</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="{{ post.thumbnail }}" alt=""/>
+      <figcaption>
+        <h2>{{ post.stitle }}</h2>
+        <p>{{ post.mywork }}</p>
+        <a href="{{ post.url }}">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
   {% endif%} 
 {% endfor %}
 </ul>

@@ -15,418 +15,591 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
-        <script src="js/main.js"></script>
+
+        <script src="/js/main.js"></script>
     </head>
     <body class="front-tpl main-page">
-        <header class="front-header">
-            <div class="top-bar">
-                <div class="wrapper">
-                    <div class="logo">
-                        <a href="/">
-                            <div class="logo-image">
-                                <img src="/img/logo_new.png" alt="">
+        <div class="page-header">
+            <header class="front-header">
+    <div class="top-bar large">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/">
+                    <div class="logo-image">
+                         <svg viewBox="0 0 600 500" class="svg-defs">
+
+                            <!-- Symbol with text -->
+                            <symbol id="s-text">
+                                <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                                    PB
+                                </text>
+                            </symbol>
+
+                            <!-- Mask with text -->
+                            <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                                <rect width="100%" height="100%" class="mask__shape">
+                                </rect>
+                                <use xlink:href="#s-text" class="mask__text"></use>
+
+                            </mask>
+                        </svg>
+
+                        <div class="box-with-text">
+
+                            <!-- Container for video -->
+                            <div class="text-fill">
+                                <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
                             </div>
-                            <div class="logo-description">
-                                <p class="site-name">Paweł <span class="bold">Basiak</span></p>
-                                <p><span class="bold">Front End</span> Developer</p>
-                            </div>
-                        </a>
+
+                            <!-- Visible SVG -->
+                            <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                                <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                                <use xlink:href="#s-text" class="text--transparent"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <ul class="menu">
-    <li><a href="/">Strona Główna</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/kontakt.html">Kontakt</a></li>
-    <!-- <li><a href="/eksperymenty.html">Eksperymenty</a></li> -->
-</ul>
-                </div>
+                    <div class="logo-description">
+                        <p class="site-name">Paweł <span class="bold">Basiak</span></p>
+                        <p><span class="bold">Front End</span> Developer</p>
+                    </div>
+                </a>
             </div>
+            <nav class="menu menu--iris">
+	<button class="mobile">Menu</button>
+	<ul class="menu__list">
+	    
+			
+			  <li class="menu__item menu__item--current"><a href="/" class="menu__link">Strona Główna</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/kontakt">Kontakt</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/omnie">O mnie</a></li>
+			
+		
+			
+			  <li class="menu__item"><a class="menu__link" href="/portfolio">Portfolio</a></li>
+			
+		
+	</ul>
+</nav>
 
-            <div class="front-slider">
-                <p><span class="black">Front end</span> <span class="white">Developer</span></p>
-            </div>
+<script>
+	$(document).ready(function(){
+		$('.mobile').click(function(){
+			$(this).next('.menu__list').toggleClass('active')
+		});
+	});
+</script>
+        </div>
+    </div>
 
-        </header>
+    <div id="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <div class="front-header-text-2">
+            <span>Projektuję & tworzę</span>
+            <span>strony internetowe</span>
+        </div>
+        <div class="front-header-text">
+            <span>Front end developer</span>
+        </div>
 
-        <div class="welcome-message">
-            <div class="mountain"></div>
-            <div class="wrapper-small">
-                <h1>Cześć <span class="bold">Wam</span></h1>
-                <p class="bold">&diams; Webdesigner &diams; Front End Developer &diams; student informatyki &diams;<br>
-                    &diams; ponad rok pracy na etacie &diams; 2 lata jako Freelancer &diams;
-                </p>
-                <p>Z tej strony Paweł Basiak. Zajmuję się tworzeniem stron www <br>oraz grafiki.
-                    Swoją przygodę zacząłem już w gimnazjum. Z początku hobby, a z czasem pasja oraz sposób na utrzymanie. Poświęcenie <br>oraz zaangażowanie w wykonywaną pracę sprawiło, że jest to moje stałe źródło utrzymania. Lubię to robić i największą satysfakcję daje mi dobrze wykonany produkt. Dużą uwagę zwracam także na rozwój swojej osoby - zarówno umiejętności interpersonalnych, jak i technicznych. 
-                    Jestem otwarty na propozycje. <a href="/kontakt.html">Skontaktuj się ze mną!</a>
-                 </p>
-            </div>
+        <div class="front-header-btns">
+            <a href="/portfolio" class="button button--antiman button--round-l button--text-medium">Zobacz portfolio</a>
+            <a href="/kontakt" class="button button--antiman button--round-l button--text-medium">Skontaktuj się!</a>
+        </div>
+    </div>
+</header>
+
+
+<script src="/js/tweenlite.min.js"></script>
+<script src="/js/easepack.min.js"></script>
+<script src="/js/raf.js"></script>
+<script src="/js/anim3.js"></script>
+
+<script>
+$(document).on("scroll",function(){
+  if($(document).scrollTop()>100){
+      $(".top-bar").removeClass("large").addClass("small");
+  } else{
+      $(".top-bar").removeClass("small").addClass("large");
+  }
+});
+</script>
         </div>
 
         <div class="front-content">
-            <div class="wrapper">
-                <h2><span class="thin">Ostatnie</span> <span class="bold">Realizacje</span></h2>
-<ul class="portfolio--list">
+            <div class="wrapperx">
+                <div class="wrapper">
+  <h2 class="text-center"><span class="thin">Wybrane</span> <span class="bold">Realizacje</span></h2>
+  <p class="section-desc">Poniżej przedstawiam kilka wybranych realizacji.</p>
+</div>
+<ul class="portfolio--list gridhover">
 
 
+  
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/zusmiechem/1.png" alt=""/>
+      <figcaption>
+        <h2>Warsztatyz<span>uśmiechem</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/warsztaty">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/strona-domowa-pawel-basiak"><img src="./img/portfolio-thumb/pbasiak.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/strona-domowa-pawel-basiak"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/strona-domowa-pawel-basiak">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, jQuery, Jekyll
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/altemedia/1.png" alt=""/>
+      <figcaption>
+        <h2>Szkolenia <span>Altemedia</span></h2>
+        <p>Projekt graficzny / kodowanie</p>
+        <a href="/realizacja/altemedia">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/burley-tobacco-trading-poland"><img src="./img/portfolio-thumb/burley.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/burley-tobacco-trading-poland"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/burley-tobacco-trading-poland">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/burley/1.png" alt=""/>
+      <figcaption>
+        <h2>Burley <span>Tobacco</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/burley">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/kamerzystaslask"><img src="./img/portfolio-thumb/kamerzysta.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/kamerzystaslask"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/kamerzystaslask">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/victoria/1.png" alt=""/>
+      <figcaption>
+        <h2>Victoria <span>Wałbrzych</span></h2>
+        <p>Projekt graficzny / Kodowanie (Wordpress)</p>
+        <a href="/realizacja/victoria">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/08/studio-urody"><img src="./img/portfolio-thumb/studio-urody.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/08/studio-urody"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/08/studio-urody">Adobe Photoshop, HTML5, CSS3, SASS&COMPASS, 
-Responsive, jQuery, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/sztormgrupa/1.png" alt=""/>
+      <figcaption>
+        <h2>Sztorm <span>Grupa</span></h2>
+        <p>Kodowanie (Wordpress)</p>
+        <a href="/realizacja/sztormgrupa">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 
   
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/06/zegrze360"><img src="./img/portfolio-thumb/zegrze.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/06/zegrze360"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/06/zegrze360">Grafika, HTML5, CSS3, SASS&COMPASS, Responsywny, Drupal
-
-
-</a></p>
-    </li>
-   
-
-
-  
-    <li class="portfolio--article">
-        <div class="post-thumb-wrapper">
-        	<a class="post-thumb" href="/2015/06/dbamyoogrody"><img src="./img/portfolio-thumb/ogrody.jpg" alt=""></a>
-	    	<div class="post-thumb-hover">
-	    		<a href="/2015/06/dbamyoogrody"><span class="field-content"><i class="fa fa-link"></i></span></a>
-	    	</div>
-        </div>
-      
-      <p class="excerpt"><a href="/2015/06/dbamyoogrody">Grafika, HTML5, CSS3, SASS&COMPASS, Drupal
-
-
-</a></p>
-    </li>
+    <figure class="portfolio--article effect-oscar">
+      <img src="./img/portfolio/kamerzysta/1.png" alt=""/>
+      <figcaption>
+        <h2>Kamerzysta <span>Śląsk</span></h2>
+        <p>Projekt graficzny / Kodowanie (Drupal)</p>
+        <a href="/realizacja/kamerzysta">Zobacz więcej</a>
+      </figcaption>     
+    </figure>
    
 
 </ul>
 
-
-<div class="skills">
-  <h2>
-    <span class="thin">Moje</span> Umiejętności
-  </h2>
-
-  <ul class="skills--list">
-    <li class="skills-item">
-      <h4>html5</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="85%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: semantyka kodu, stare & nowe znaczniki, !divitis, modularny kod, estetyka</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>css3</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="90%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: stare & nowe znaczniki, animation, transition, pozycjonowanie, modularny kod, estetyka</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>sass & compass</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="70%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: $zmienne, @mixiny, zagnieżdżanie, extendy, zalety compassa, modularny kod, estetyka</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>less</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="50%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: $zmienne, zagnieżdżanie, extendy, modularny kod, estetyka</p>
-      </div>
-    </li>    
-
-    <li class="skills-item">
-      <h4>JavaScript</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="20%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: instrukcje warunkowe, pętle, trochę info o obiektach</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>jQuery</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="60%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: trochę funkcji, jak stosować, proste skrypty (menu rozwijające, funkcja pobierająca wartości, slidery)</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>php</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="20%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: instrukcje warunkowe, pętle, kilka funkcji</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>zen-grids</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="90%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: dobrze stosować, efektywnie wykorzystywać, zen-new-row, container, zen-grid-item etc.</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>bootstrap</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="35%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: wiem co to jest, znam kilka klas oraz zasadę działania, wiem gdzie jest dokumentacja z rozpiską</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>drupal</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="65%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: tworzyć szablony, strukture szablonu, panel administracyjny, views</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>wordpress</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="50%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: tworzyć szablony, dodatkowe zawartości, widget-area</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>prestashop</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="20%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: tworzyć szablony</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>joomla!</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="25%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: tworzyć szablony, trochę panel administracyjny</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>responsive web design</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="85%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: @media-queries, mobile first</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>git</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="40%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: zasadę działania, checkout, push, branche</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>adobe photoshop</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="80%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: obsługa programu, znajomość funkcji, filtrów, tworzenie projektów graficznych stron, wizytówek</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>gimp</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="60%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: obsługa programu, znajomość funkcji, tworzenie grafiki</p>
-      </div>
-    </li>
-
-    <li class="skills-item">
-      <h4>sublime text</h4>
-      <div class="skill-wrapper">
-        <span class="test" data-width="80%">
-          <span class="tooltip"></span>
-        </span>
-      </div>
-
-      <div class="description">
-        <p><strong>znam, potrafię</strong>: obsługa programu, skróty klawiszowe, emmet</p>
-      </div>
-    </li>
-
-  </ul>
-
-  <section class="extra-info">
-    <p>* jest to subiektywna ocena i może się trochę różnić od ocen innych, odpowiednio może być wyższa lub niższa. Opis może nie zawierać wszystkich zagadnień.</p>
-  </section>
+<div class="wrapper">
+  <div class="portfolio-bottom">
+    <a href="/kontakt" class="button button--antiman button--round-l button--text-medium">Skontaktuj się</a>
+    <a href="/portfolio" class="button button-text">Pokaż więcej</a>
+  </div>
 </div>
+
+<script src="/js/countUp.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var expYears = new CountUp("expYears", 0, 4);
+    var expProjects = new CountUp("expProjects", 0, 60);
+    var expCode = new CountUp("expCode", 0, 120);
+
+    
+
+    $(window).scroll(function(){
+
+      var top_expCounter = $("#expCounter").offset().top;
+      var height_expCounter = $("#expCounter").outerHeight();
+      var wH = $(window).height();
+
+      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
+        expYears.start();
+        expProjects.start();
+        expCode.start();
+      }
+    });
+  });
+</script>
+
+<div class="experience">
+  <div class="wrapper">
+    <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
+    <p class="section-desc">Mam ponad 4-letnie doświadczenie w tworzeniu profesjonalnych serwisów www. Zajmuję się projektowaniem graficznym oraz programowaniem. Dzięki współpracy z zaufanymi firmami, oferuję kompleksową realizację stron wliczając w to m.in. hosting, domeny.</p>
+    <ul id="expCounter">
+      <li><div class="exp-row"><span id="expYears"></span><span>+</span></div><div class="exp-description">lat doświadczenia</div></li>
+      <li><div class="exp-row"><span id="expProjects"></span><span>+</span></div><div class="exp-description">projektów</div></li>
+      <li><div class="exp-row"><span id="expCode"></span><span>+</span></div><div class="exp-description">tysięcy linii kodu</div></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <div class="skills">
+    <h2 class="text-center">
+      <span class="thin">Moje</span> Umiejętności
+    </h2>
+
+    <p class="section-desc">Na przestrzeni lat nabyłem wiele umiejętności, które stale rozwijam. Na pierwszym miejscu stawiam <strong>pefekcję</strong> podczas realizacji zadań. Poniżej przedstawiam stopień zaawansowania w technologiach oraz narzędziach pracy.</p>
+
+    <ul class="skills--list">
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Znajomość HTMLa to podstawa!
+            Stale jest w mojej pamięci i piszę go automatycznie.
+          </span>
+        </span></span>
+        <h4>html5</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="90%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Potrafię nim efektywnie operować. <br>
+            Interesują mnie nowości oraz jak coś można zrobić bez JavaScriptowej nadgorliwości.
+          </span>
+        </span></span>
+        <h4>css3</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="90%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Niesamowite ułatwienie! Pozwala na nawet 50% oszczędności czasu więc znajomość wymagana.
+          </span>
+        </span></span>
+        <h4>sass & compass</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="70%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Nie mam z nim problemu, stosuję go, gdy potrzeba, lecz Sass jest na pierwszy miejscu.
+          </span>
+        </span></span>
+        <h4>less</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="50%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>    
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Umiejętność poruszania się w kodzie to niesamowicie przydatna umiejętność.
+            Napisanie oraz modyfikacja drobnych rzeczy również nie sprawia mi problemu.
+          </span>
+        </span></span>
+        <h4>JS</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="20%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Jednolitość w przeglądarkach jest wysoce wymagana, znajomość tego narzędzia świetnie to ułatwia.
+          </span>
+        </span></span>
+        <h4>jQuery</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="60%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Szablon w Wordpressie czy Drupalu to nie tylko HTML i CSS, to również PHP.
+            Potrzebny do napisania dodatkowych modyfikacji oraz ułatwień w szablonie.
+          </span>
+        </span></span>
+        <h4>php</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="20%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            System gridu, który pozwala na dowolne układy!
+            Super sprawa, kiedy drażni Cię nadklasowość.
+          </span>
+        </span></span>
+        <h4>zen-grids</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="90%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Przydatny zestaw komponentów CSS oraz JS. <br>
+            Dzisiaj bez tego ani rusz!
+          </span>
+        </span></span>
+        <h4>bootstrap</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="35%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Mój podstawowy CMS! <br>
+            Znany jako ciężki system, lecz przy odpowiedniej konfiguracji staje się najlepszy!
+          </span>
+        </span></span>
+        <h4>drupal</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="65%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Szybki i popularny CMS. Łatwo nim operuję oraz modyfikuję!
+          </span>
+        </span></span>
+        <h4>wordpress</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="50%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            eCommerce - system, z którym pracuję w tej branży.
+          </span>
+        </span></span>
+        <h4>prestashop</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="20%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Kolejny system CMS, którym warto się zainteresować. <br>
+            Pracuję na nim sporadycznie.
+          </span>
+        </span></span>
+        <h4>joomla!</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="25%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Każda stworzona strona musi być responsywna,
+            dlatego tę technikę wykorzystuję na co dzień.
+          </span>
+        </span></span>
+        <h4>responsive web design</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="85%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Wielokrotnie pojawia się w codziennej pracy.
+            Jest git!
+          </span>
+        </span></span>
+        <h4>git</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="40%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Jedna z moich głównych pasji, czyli projektowanie graficzne!
+          </span>
+        </span></span>
+        <h4>adobe photoshop</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="85%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Początki grafiki zaczęły się od niego.
+            Wspaniałe narzędzie, które warto poznać.
+          </span>
+        </span></span>
+        <h4>gimp</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="60%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+      <li class="skills-item tooltip">
+        <span class="tooltip-content"><span class="tooltip-text">
+          <span class="tooltip-inner">
+            Narzędzie, które również skraca czas pracy. Wraz z emmet jest niezastąpiony. :)
+          </span>
+        </span></span>
+        <h4>sublime text</h4>
+        <div class="skill-wrapper">
+          <span class="test" data-width="80%">
+            <span class="tooltipx"></span>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="front-bottom">
+      <a href="/kontakt" class="button button--antiman button--round-l button--text-medium">Skontaktuj się</a>
+      <a href="/omnie" class="button button-text">Więcej o mnie</a>
+    </div>
+
+    <section class="extra-info">
+      <p class="text-center">* jest to subiektywna ocena i może się trochę różnić od oceny innych. Opis może nie zawierać wszystkich zagadnień.</p>
+    </section>
+  </div>
+</div>
+
+<div class="cooperation">
+  <div class="wrapper">
+    <h2 class="text-center"><span class="thin">Zaufali</span> mi</h2>
+    <ul class="logos-list">
+      <li><img src="/img/logos/altemedia.png" alt=""></li>
+      <li><img src="/img/logos/cstore.png" alt=""></li>
+      <li><img src="/img/logos/dwakroki.png" alt=""></li>
+      <li><img src="/img/logos/ifarg.png" alt=""></li>
+      <li><img src="/img/logos/logo_215_320px.png" alt=""></li>
+      <li><img src="/img/logos/victoria.png" alt=""></li>
+      <li><img src="/img/logos/wirtualne.png" alt=""></li>
+      <li><img src="/img/logos/zegrze360.png" alt=""></li>
+    </ul>
+  </div>
+</div>
+
             </div>
         </div>
         <footer class="page-footer">
 	<div class="wrapper">
 		<div class="logo">
 			<div class="logo-image">
-	            <img src="/img/logo_new_light.png" alt="">
-	        </div>
+                 <svg viewBox="0 0 600 500" class="svg-defs">
+
+                    <!-- Symbol with text -->
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="50%" dy="50px" class="text">
+                            PB
+                        </text>
+                    </symbol>
+
+                    <!-- Mask with text -->
+                    <mask id="m-text" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+
+                        <rect width="100%" height="100%" class="mask__shape">
+                        </rect>
+                        <use xlink:href="#s-text" class="mask__text"></use>
+
+                    </mask>
+                </svg>
+
+                <div class="box-with-text">
+
+                    <!-- Container for video -->
+                    <div class="text-fill">
+                        <video class="video" src="/img/bokeh2.mp4" autoplay loop></video>
+                    </div>
+
+                    <!-- Visible SVG -->
+                    <svg viewBox="0 0 600 300" class="svg-inverted-mask">
+                        <rect width="100%" height="100%" mask="url(#m-text)" class="shape--fill" />
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+                    </svg>
+                </div>
+            </div>
 	        <div class="logo-description">
 	            <p class="site-name">Paweł <span class="bold">Basiak</span></p>
 	            <p><span class="bold">Front-end</span> Developer</p>
