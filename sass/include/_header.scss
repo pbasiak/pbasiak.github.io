@@ -190,6 +190,11 @@ $stroke-step: 7%;
       &.site-name {
         font-size: 32px;
         font-weight: 300;
+
+        @media all and (max-width: 360px) {
+          font-size: 18px;
+          margin-top: 14px;
+        }
       }
     }
   }

@@ -30,6 +30,10 @@
 		top: 25%;
 		width: 100%;
 
+		@media all and (max-width: 360px) {
+			top: 35%;
+		}
+
 		span {
 			font-size: 42px;
 			font-weight: 700;
@@ -39,6 +43,10 @@
 			color: #33B8EF;
 
 			@media all and (max-width: 767px) {
+				font-size: 36px;
+			}
+
+			@media all and (max-width: 480px) {
 				font-size: 24px;
 			}
 
@@ -53,6 +61,10 @@
 		top: 45%;
 		text-align: center;
 		width: 100%;
+
+		@media all and (max-width: 360px) {
+			display: none;
+		}
 
 		> span {
 			font-size: 72px;
@@ -516,8 +528,13 @@
 	top: 0;
 	z-index: 0;
 	width: 100%;
+	height: 100vh;
 
 	> canvas {
 		width: 100%;
+
+		@media all and (max-width: 480px) {
+			display: none;
+		}
 	}
 }
