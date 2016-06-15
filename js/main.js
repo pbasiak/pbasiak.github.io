@@ -11,12 +11,3 @@ $(document).ready(function() {
 		$(this).find('.tooltip').css('left', skillWidth);
 	});
 });
-
-
-$(window).load(function(){
-	$('.portfolio--list').masonry({
-	  // options
-	  itemSelector: '.portfolio--article',
-	  columnWidth: '.portfolio--article'
-	});
-});
