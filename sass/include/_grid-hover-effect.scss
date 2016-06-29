@@ -87,6 +87,10 @@ figure.effect-oscar {
 	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
 	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 	max-height: 315px;
+
+	@media all and (min-width: 1480px) {
+		max-height: 340px;
+	}
 }
 
 figure.effect-oscar img {

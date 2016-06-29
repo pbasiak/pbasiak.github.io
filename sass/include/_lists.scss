@@ -4,12 +4,29 @@
 	margin-top: 100px;
 	margin-bottom: 40px;
 
+	@media all and (max-width: 991px) {
+		text-align: center;
+	}
+
 	li {
 		display: inline-block;
 		vertical-align: middle;
 		width: 16.25%;
 		text-align: center;
 		position: relative;
+
+		@media all and (max-width: 991px) {
+			width: 20%;
+			margin-bottom: 30px;
+		}
+
+		@media all and (max-width: 767px) {
+			width: 32.5%;
+		}
+
+		@media all and (max-width: 480px) {
+			width: 51%;
+		}
 
 		&:after {
 			content: "";
@@ -19,6 +36,10 @@
 			right: -36px;
 			background-image: url(../img/arrow-white.png);
 			background-repeat: no-repeat;
+
+			@media all and (max-width: 991px) {
+				display: none;
+			}
 		}
 
 		&:nth-child(1):after {
@@ -89,5 +110,33 @@
 
 	.item-content.special {
 		background: url(../img/pattern-green.png);
+	}
+}
+
+// Advantages list
+
+.list--ok {
+	list-style: none !important;
+	padding-left: 10px !important;
+
+	li {
+		padding-left: 37px;
+		margin-bottom: 7px;
+		background: url(../img/list-ok.png);
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
+}
+
+.list--not {
+	list-style: none !important;
+	padding-left: 10px !important;
+
+	li {
+		padding-left: 37px;
+		margin-bottom: 7px;
+		background: url(../img/list-minus.png);
+		background-position: left center;
+		background-repeat: no-repeat;
 	}
 }

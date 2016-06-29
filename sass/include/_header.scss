@@ -40,7 +40,7 @@ $stroke-step: 7%;
 
 /* Iris */
 .menu--iris .menu__item {
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 
 .menu--iris .menu__link {
@@ -219,15 +219,16 @@ $stroke-step: 7%;
         visibility: hidden;
         opacity: 0;
         @include transition(all 0.5s ease);
-
-        @media all and (max-width: 1023px) {
-          margin-top: 30px;
-        }
+        margin-top: -400px;        
 
         &.active {
           visibility: visible;
           //display: block;
           opacity: 1;
+
+          @media all and (max-width: 1023px) {
+            margin-top: 30px;
+          }
         }
       }
     }

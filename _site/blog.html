@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>O mnie | Paweł Basiak - Web Designer, Front end developer</title>
+<title>Blog | Paweł Basiak - Web Designer, Front end developer</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -63,7 +63,7 @@
 		
 			
 				
-				  <li class="menu__item menu__item--current"><a href="/omnie" class="menu__link">O mnie</a></li>
+				  <li class="menu__item"><a class="menu__link" href="/omnie">O mnie</a></li>
 				
 			
 		
@@ -77,7 +77,7 @@
 		
 			
 				
-				  <li class="menu__item"><a class="menu__link" href="/blog">Blog</a></li>
+				  <li class="menu__item menu__item--current"><a href="/blog" class="menu__link">Blog</a></li>
 				
 			
 		
@@ -112,79 +112,68 @@ $(document).on("scroll",function(){
         </div>
 
         <div class="front-content">
-            <div class="wrapper page-omnie about-me">
-	<h1 class="text-center"><span class="thin">O</span> mnie</h1>
-
-	<div class="onepage">
-		<section class="about-desc">
-			<img src="/img/about/photo.png" alt="">
-			<p>Pasjonuję się projektowaniem oraz tworzeniem profesjalnych stron internetowych. Z przyjemnością łączę te elementy w codziennej pracy. Dzięki współpracy z zaufanymi firmami jestem w stanie kompleksowo wykonać strony.
-			Ciągle się rozwijam, stawiam coraz wyższe cele oraz wykonuję swoje 
-			czynności <strong>perfekcyjnie</strong>. </p>
-		</section>
-	</div>
-</div>
-
-<script src="/js/countUp.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    var expYears = new CountUp("expYears", 0, 4);
-    var expProjects = new CountUp("expProjects", 0, 60);
-    var expCode = new CountUp("expCode", 0, 120);
-
+            <div class="text-wrapper">
+  <h1><span class="thin">Blog</span> </h1>
+  <ul class="blog--list">
     
 
-    $(window).scroll(function(){
+      
+        <article class="blog--article">
+          <a href="/2016/06/jak-stworzyc-swoja-strone-www"><img src="/img/articles/1/title.png" alt="Jak stworzyc swoją strone www?"></a>
+          <h2><a href="/2016/06/jak-stworzyc-swoja-strone-www">Jak stworzyc swoją strone www?</a></h2>
+          <ul class="tags">
+            Tagi:
+            
+              <li><a href="/tags#tworzenie stron www" class="tag">tworzenie stron www</a></li>
+            
+              <li><a href="/tags#strona internetowa" class="tag">strona internetowa</a></li>
+            
+            <p class="post-author">Autor: <span>Paweł Basiak</span></p>
+          </ul>
+          <p class="excerpt">Jak stworzyć swoją stronę www? Wstęp. W dzisiejszych czasach strona internetowa to jedno z najważniejszych mediów. Jest to doskonałe miejsce na promocję własnej działalności, marki, produktu oraz na prezentację własnej osoby. Pozwala na dotarcie do zróżnicowanej grupy odbiorców. Dzięki niej możemy pozyskać nowych klientów lub powiększać prestiż naszej marki na rynku....</p>   
+          <div class="button-wrapp">
+            <a class="button button--read-more button--antiman button--round-l button--text-medium" href="/2016/06/jak-stworzyc-swoja-strone-www">Zobacz więcej</a>
+          </div>
+          <div class="share-page">
+            Udostępnij artykuł na &rarr;
+            <a href="https://twitter.com/intent/tweet?text=Jak stworzyc swoją strone www?&url=/2016/06/jak-stworzyc-swoja-strone-www&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+            <a href="https://facebook.com/sharer.php?u=/2016/06/jak-stworzyc-swoja-strone-www" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+            <a href="https://plus.google.com/share?url=/2016/06/jak-stworzyc-swoja-strone-www" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+          </div>
+        </article>
+       
+    
 
-      var top_expCounter = $("#expCounter").offset().top;
-      var height_expCounter = $("#expCounter").outerHeight();
-      var wH = $(window).height();
+       
+    
 
-      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
-        expYears.start();
-        expProjects.start();
-        expCode.start();
-      }
-    });
-  });
-</script>
+       
+    
 
-<div class="experience">
-  <div class="wrapper">
-    <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
-    <ul id="expCounter">
-      <li><div class="exp-row"><span id="expYears"></span><span>+</span></div><div class="exp-description">lat doświadczenia</div></li>
-      <li><div class="exp-row"><span id="expProjects"></span><span>+</span></div><div class="exp-description">projektów</div></li>
-      <li><div class="exp-row"><span id="expCode"></span><span>+</span></div><div class="exp-description">tysięcy linii kodu</div></li>
-    </ul>
-  </div>
-</div>
+       
+    
 
+       
+    
 
-<div class="wrapper page-omnie">
-	<section class="about-conf">
-		<h2 class="text-center"><span class="thin">Działania</span> dodatkowe</h2>
-		<img src="/img/about/infoshare.png" alt="">
-		<p>Aby polepszyć wykonywane usługi, należy być na bieżąco z technologiami oraz otwartym na doświadczenie innych. W tym roku uczestniczyłem w największej tego typu konferencji w centralnej Europie - <strong>infoShare</strong>. Edycja 2016 wywarła na mnie pozytywne wrażenie i z pewnością udam się na kolejną.</p> 
-	</section>
+       
+    
 
-	<section class="about-cert">
-		<h3 class="text-center">Certyfikat</h3>
-		<img src="/img/about/cert.png" alt="">
-		<p>Znając wiele technologii stajemy się lepszymi programistami, projektantami. Pod koniec 2015 roku zdobyłem certyfikat z .NET.
-			Uważam, że jest to bardzo interesujący język.</p> 
-	</section>
-</div>
+       
+    
 
+       
+    
 
-<div class="about-place">
-  <div class="wrapper">
-    <h2><span class="thin">Miejsce</span> pracy</h2>
-    <p class="section-desc">
-      Moim miejscem jest Gdańsk. To bardzo piękne nadmorskie miasto. Duża ilość dróg rowerowych sprawia, że w ciepłe dni udaję się na wycieczki rowerem. Jest to dla mnie sposób na efektywny relaks. Dzięki temu regeneruję siły i odświeżam swoją kreatywność.
-    </p>
-  </div>
+       
+    
+
+       
+    
+
+       
+    
+  </ul>
 </div>
         </div>
         <footer class="page-footer">

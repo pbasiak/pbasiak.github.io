@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>O mnie | Paweł Basiak - Web Designer, Front end developer</title>
+<title>Tag | Paweł Basiak - Web Designer, Front end developer</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -63,7 +63,7 @@
 		
 			
 				
-				  <li class="menu__item menu__item--current"><a href="/omnie" class="menu__link">O mnie</a></li>
+				  <li class="menu__item"><a class="menu__link" href="/omnie">O mnie</a></li>
 				
 			
 		
@@ -112,79 +112,61 @@ $(document).on("scroll",function(){
         </div>
 
         <div class="front-content">
-            <div class="wrapper page-omnie about-me">
-	<h1 class="text-center"><span class="thin">O</span> mnie</h1>
+            <div class="text-wrapper">
+	<h1>Tagi</h1>
+	<!-- Get the tag name for every tag on the site and set them
+	to the `site_tags` variable. -->
+	
 
-	<div class="onepage">
-		<section class="about-desc">
-			<img src="/img/about/photo.png" alt="">
-			<p>Pasjonuję się projektowaniem oraz tworzeniem profesjalnych stron internetowych. Z przyjemnością łączę te elementy w codziennej pracy. Dzięki współpracy z zaufanymi firmami jestem w stanie kompleksowo wykonać strony.
-			Ciągle się rozwijam, stawiam coraz wyższe cele oraz wykonuję swoje 
-			czynności <strong>perfekcyjnie</strong>. </p>
-		</section>
+	<!-- `tag_words` is a sorted array of the tag names. -->
+	
+
+	<ul class="tags">
+	  
+	    
+	    <li>
+	      <a href="#strona+internetowa" class="tag">strona internetowa
+	        <span>(1)</span>
+	      </a>
+	    </li>
+	  
+	    
+	    <li>
+	      <a href="#tworzenie+stron+www" class="tag">tworzenie stron www
+	        <span>(1)</span>
+	      </a>
+	    </li>
+	  
+	</ul>
+
+	<!-- Posts by Tag -->
+	<div>
+	  
+	    
+	    <h2 id="strona+internetowa">strona internetowa</h2>
+	    
+	      <div>
+	        <span style="float: left;">
+	          <a href="/2016/06/jak-stworzyc-swoja-strone-www">Jak stworzyc swoją strone www?</a>
+	        </span>
+
+	      </div>
+	      <div style="clear: both;"></div>
+	    
+	  
+	    
+	    <h2 id="tworzenie+stron+www">tworzenie stron www</h2>
+	    
+	      <div>
+	        <span style="float: left;">
+	          <a href="/2016/06/jak-stworzyc-swoja-strone-www">Jak stworzyc swoją strone www?</a>
+	        </span>
+
+	      </div>
+	      <div style="clear: both;"></div>
+	    
+	  
 	</div>
-</div>
-
-<script src="/js/countUp.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    var expYears = new CountUp("expYears", 0, 4);
-    var expProjects = new CountUp("expProjects", 0, 60);
-    var expCode = new CountUp("expCode", 0, 120);
-
-    
-
-    $(window).scroll(function(){
-
-      var top_expCounter = $("#expCounter").offset().top;
-      var height_expCounter = $("#expCounter").outerHeight();
-      var wH = $(window).height();
-
-      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
-        expYears.start();
-        expProjects.start();
-        expCode.start();
-      }
-    });
-  });
-</script>
-
-<div class="experience">
-  <div class="wrapper">
-    <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
-    <ul id="expCounter">
-      <li><div class="exp-row"><span id="expYears"></span><span>+</span></div><div class="exp-description">lat doświadczenia</div></li>
-      <li><div class="exp-row"><span id="expProjects"></span><span>+</span></div><div class="exp-description">projektów</div></li>
-      <li><div class="exp-row"><span id="expCode"></span><span>+</span></div><div class="exp-description">tysięcy linii kodu</div></li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="wrapper page-omnie">
-	<section class="about-conf">
-		<h2 class="text-center"><span class="thin">Działania</span> dodatkowe</h2>
-		<img src="/img/about/infoshare.png" alt="">
-		<p>Aby polepszyć wykonywane usługi, należy być na bieżąco z technologiami oraz otwartym na doświadczenie innych. W tym roku uczestniczyłem w największej tego typu konferencji w centralnej Europie - <strong>infoShare</strong>. Edycja 2016 wywarła na mnie pozytywne wrażenie i z pewnością udam się na kolejną.</p> 
-	</section>
-
-	<section class="about-cert">
-		<h3 class="text-center">Certyfikat</h3>
-		<img src="/img/about/cert.png" alt="">
-		<p>Znając wiele technologii stajemy się lepszymi programistami, projektantami. Pod koniec 2015 roku zdobyłem certyfikat z .NET.
-			Uważam, że jest to bardzo interesujący język.</p> 
-	</section>
-</div>
-
-
-<div class="about-place">
-  <div class="wrapper">
-    <h2><span class="thin">Miejsce</span> pracy</h2>
-    <p class="section-desc">
-      Moim miejscem jest Gdańsk. To bardzo piękne nadmorskie miasto. Duża ilość dróg rowerowych sprawia, że w ciepłe dni udaję się na wycieczki rowerem. Jest to dla mnie sposób na efektywny relaks. Dzięki temu regeneruję siły i odświeżam swoją kreatywność.
-    </p>
-  </div>
 </div>
         </div>
         <footer class="page-footer">

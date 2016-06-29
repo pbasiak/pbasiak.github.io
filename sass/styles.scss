@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,900,700,300&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,300&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Noticia+Text:400,700&subset=latin,latin-ext);
 @import "compass";
 $white: #ecf0f1;
 $red: #26ADE4;
@@ -23,9 +24,20 @@ body {
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
+	clear: both;
 
 	@media all and (max-width: 1200px) {
 		padding: 0 15px;
+	}
+}
+
+.text-wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+
+	h1, h2, h3, h4, h5 {
+		font-family: 'Noticia Text', serif;
+		margin-bottom: 0.65em;
 	}
 }
 
@@ -57,6 +69,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	font-size: 48px;
 	font-weight: 600;
+	font-family: 'Noticia Text', serif;
 }
 
 h2 {
@@ -129,7 +142,6 @@ strong {
 @import "include/default-tpl";
 @import "include/tooltip";
 @import "include/btns";
-@import "include/grid-effect";
 @import "include/exp-counter";
 @import "include/grid-hover-effect";
 
