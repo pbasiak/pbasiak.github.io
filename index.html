@@ -30,31 +30,6 @@ menu: main
   </div>
 </div>
 
-<script src="/js/countUp.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    var expYears = new CountUp("expYears", 0, 4);
-    var expProjects = new CountUp("expProjects", 0, 60);
-    var expCode = new CountUp("expCode", 0, 120);
-
-    
-
-    $(window).scroll(function(){
-
-      var top_expCounter = $("#expCounter").offset().top;
-      var height_expCounter = $("#expCounter").outerHeight();
-      var wH = $(window).height();
-
-      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
-        expYears.start();
-        expProjects.start();
-        expCode.start();
-      }
-    });
-  });
-</script>
-
 <div class="experience">
   <div class="wrapper">
     <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
@@ -67,6 +42,22 @@ menu: main
   </div>
 </div>
 
+
+<script>
+  $(document).ready(function() {
+  /* Skills */
+
+  $('.skills-item .skill-wrapper').each(function(){
+    var skillWidth = $(this).children('span').attr('data-width');
+
+    $(this).children('span').css('width', skillWidth);
+
+    $(this).find('.tooltip').text(skillWidth);
+
+    $(this).find('.tooltip').css('left', skillWidth);
+  });
+});
+</script>
 
 <div class="wrapper">
   <div class="skills">

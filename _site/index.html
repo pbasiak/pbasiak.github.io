@@ -7,7 +7,6 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="/css/screen.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
@@ -29,7 +28,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-        <script src="/js/main.js"></script>
     </head>
     <body class="front-tpl main-page">
         <div class="page-header">
@@ -118,10 +116,7 @@
 </header>
 
 
-<script src="/js/tweenlite.min.js"></script>
-<script src="/js/easepack.min.js"></script>
-<script src="/js/raf.js"></script>
-<script src="/js/anim3.js"></script>
+<script src="/js/pack.js"></script>
 
 <script>
 $(document).on("scroll",function(){
@@ -226,31 +221,6 @@ $(document).on("scroll",function(){
   </div>
 </div>
 
-<script src="/js/countUp.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    var expYears = new CountUp("expYears", 0, 4);
-    var expProjects = new CountUp("expProjects", 0, 60);
-    var expCode = new CountUp("expCode", 0, 120);
-
-    
-
-    $(window).scroll(function(){
-
-      var top_expCounter = $("#expCounter").offset().top;
-      var height_expCounter = $("#expCounter").outerHeight();
-      var wH = $(window).height();
-
-      if ($(window).scrollTop() > (top_expCounter + height_expCounter - wH + 20)) {
-        expYears.start();
-        expProjects.start();
-        expCode.start();
-      }
-    });
-  });
-</script>
-
 <div class="experience">
   <div class="wrapper">
     <h2 class="text-center"><span class="thin">Dośw</span>iadczenie</h2>
@@ -263,6 +233,22 @@ $(document).on("scroll",function(){
   </div>
 </div>
 
+
+<script>
+  $(document).ready(function() {
+  /* Skills */
+
+  $('.skills-item .skill-wrapper').each(function(){
+    var skillWidth = $(this).children('span').attr('data-width');
+
+    $(this).children('span').css('width', skillWidth);
+
+    $(this).find('.tooltip').text(skillWidth);
+
+    $(this).find('.tooltip').css('left', skillWidth);
+  });
+});
+</script>
 
 <div class="wrapper">
   <div class="skills">
