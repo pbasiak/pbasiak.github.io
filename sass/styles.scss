@@ -5,6 +5,8 @@ $white: #ecf0f1;
 $red: #26ADE4;
 $black: #2f3d4c;
 
+@import "screen";
+
 @mixin links($link, $link-hover) {
 	@include link-colors($link, $link-hover, $link-hover, $link, $link-hover);
 }
