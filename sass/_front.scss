@@ -53,6 +53,20 @@
 			&:nth-child(1) {
 				font-weight: 300;
 			}
+
+			&.small {
+				font-size: 16px;
+				font-family: 'Noticia Text';
+				padding: 15px;
+				color: #969696;
+				border-top: 1px solid #f8f8f8;
+				border-bottom: 1px solid #f8f8f8;
+				margin-top: 10px;
+
+				@media all and (max-width: 980px) {
+					display: none;
+				}
+			}
 		}
 	}
 
