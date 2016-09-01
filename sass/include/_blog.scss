@@ -160,6 +160,10 @@
 	border-radius: 4px;
 	margin-bottom: 25px;
 
+	@media all and (max-width: 767px) {
+		text-align: center;
+	}
+
 	.img {
 		float: left;
 		width: 150px;
@@ -168,6 +172,11 @@
 		overflow: hidden;
 		margin-top: 10px;
 		border: 10px solid #e4e4e499;
+
+		@media all and (max-width: 767px) {
+			float: none;
+			display: inline-block;
+		}
 
 		img {
 			max-width: 100%;
@@ -183,6 +192,13 @@
 		margin-left: 40px;
 		font-size: 14px;
 		color: #5c5c5c;
+
+		@media all and (max-width: 767px) {
+			float: none;
+			display: inline-block;
+			max-width: 80%;
+			margin: 0;
+		}
 
 		.title {
 			font-weight: bold;
