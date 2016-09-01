@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="/css/styles.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+<script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script defer src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -88,25 +88,9 @@
 	</ul>
 </nav>
 
-<script>
-	$(document).ready(function(){
-		$('.mobile').click(function(){
-			$(this).next('.menu__list').toggleClass('active')
-		});
-	});
-</script>
         </div>
     </div>
 </header>
-<script>
-$(document).on("scroll",function(){
-  if($(document).scrollTop()>100){
-      $(".top-bar").removeClass("large").addClass("small");
-  } else{
-      $(".top-bar").removeClass("small").addClass("large");
-  }
-});
-</script>
         </div>
 
         <div class="front-content">
@@ -241,14 +225,8 @@ $(document).on("scroll",function(){
 		</div>
 	</div>
 </footer>
-        <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-37336267-4','auto');ga('send','pageview');
-</script>
+        <!-- Load all scripts used on all pages -->
+<script defer src="js/scripts.js"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Noticia+Text:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
