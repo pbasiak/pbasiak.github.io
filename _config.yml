@@ -1,3 +1,0 @@
-exclude: [sass, config.rb]
-excerpt_separator: <!--more-->  # you can specify your own separator, of course.
-permalink: /:year/:month/:title
