@@ -360,8 +360,25 @@ a {
 
 .page-footer {
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @media screen and (max-width: 1024px) {
         padding: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    &-credit {
+        color: #737373;
+        font-size: 14px;
+    }
+
+    &-link {
+        color: #737373;
+        text-decoration: underline;
     }
 }
