@@ -119,7 +119,7 @@ a {
 
     &--bg-coding {
         background: url('./img/coding.png') no-repeat;
-        background-size: 200px auto;
+        background-size: auto 100%;
         background-position: right center;
 
         @media screen and (max-width: 1024px) {
@@ -167,6 +167,7 @@ a {
 .portfolio {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 840px) {
         flex-direction: column;
@@ -175,7 +176,10 @@ a {
 
     &-link {
         padding: 40px 0;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
         text-transform: uppercase;
         color: #000;
@@ -184,19 +188,21 @@ a {
         width: 300px;
         text-align: center;
         transition: 0.4s all ease;
+        margin-bottom: 20px;
 
         @media screen and (max-width: 980px) {
             width: 250px;
-        }
-
-        @media screen and (max-width: 840px) {
-            margin-bottom: 20px;
         }
 
         &:hover {
             color: $color--primary;
             border-color: $color--primary;
         }
+    }
+
+    &-description {
+        font-size: 13px;
+        color: #606060;
     }
 }
 
@@ -354,8 +360,25 @@ a {
 
 .page-footer {
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @media screen and (max-width: 1024px) {
         padding: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    &-credit {
+        color: #737373;
+        font-size: 14px;
+    }
+
+    &-link {
+        color: #737373;
+        text-decoration: underline;
     }
 }
