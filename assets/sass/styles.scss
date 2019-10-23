@@ -167,6 +167,7 @@ a {
 .portfolio {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 840px) {
         flex-direction: column;
@@ -175,7 +176,10 @@ a {
 
     &-link {
         padding: 40px 0;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
         text-transform: uppercase;
         color: #000;
@@ -184,19 +188,21 @@ a {
         width: 300px;
         text-align: center;
         transition: 0.4s all ease;
+        margin-bottom: 20px;
 
         @media screen and (max-width: 980px) {
             width: 250px;
-        }
-
-        @media screen and (max-width: 840px) {
-            margin-bottom: 20px;
         }
 
         &:hover {
             color: $color--primary;
             border-color: $color--primary;
         }
+    }
+
+    &-description {
+        font-size: 13px;
+        color: #606060;
     }
 }
 
